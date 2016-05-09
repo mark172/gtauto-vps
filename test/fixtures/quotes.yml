@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  phone: MyString
+  pick_up_date: 2016-05-09 23:00:34
+  origin_city: MyString
+  origin_state: MyString
+  origin_zip: MyString
+  destination_city: MyString
+  destination_state: MyString
+  destination_zip: MyString
+  year: MyString
+  make: MyString
+  model: MyString
+  is_operable: false
+  description: MyText
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  phone: MyString
+  pick_up_date: 2016-05-09 23:00:34
+  origin_city: MyString
+  origin_state: MyString
+  origin_zip: MyString
+  destination_city: MyString
+  destination_state: MyString
+  destination_zip: MyString
+  year: MyString
+  make: MyString
+  model: MyString
+  is_operable: false
+  description: MyText

@@ -1,0 +1,26 @@
+<%= simple_form_for(@quote) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email %>
+    <%= f.input :phone %>
+    <%= f.input :pick_up_date %>
+    <%= f.input :origin_city %>
+    <%= f.input :origin_state %>
+    <%= f.input :origin_zip %>
+    <%= f.input :destination_city %>
+    <%= f.input :destination_state %>
+    <%= f.input :destination_zip %>
+    <%= f.input :year %>
+    <%= f.input :make %>
+    <%= f.input :model %>
+    <%= f.input :is_operable %>
+    <%= f.input :description %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

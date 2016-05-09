@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Pick up date</th>
+      <th>Origin city</th>
+      <th>Origin state</th>
+      <th>Origin zip</th>
+      <th>Destination city</th>
+      <th>Destination state</th>
+      <th>Destination zip</th>
+      <th>Year</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Is operable</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quotes.each do |quote| %>
+      <tr>
+        <td><%= quote.first_name %></td>
+        <td><%= quote.last_name %></td>
+        <td><%= quote.email %></td>
+        <td><%= quote.phone %></td>
+        <td><%= quote.pick_up_date %></td>
+        <td><%= quote.origin_city %></td>
+        <td><%= quote.origin_state %></td>
+        <td><%= quote.origin_zip %></td>
+        <td><%= quote.destination_city %></td>
+        <td><%= quote.destination_state %></td>
+        <td><%= quote.destination_zip %></td>
+        <td><%= quote.year %></td>
+        <td><%= quote.make %></td>
+        <td><%= quote.model %></td>
+        <td><%= quote.is_operable %></td>
+        <td><%= quote.description %></td>
+        <td><%= link_to 'Show', quote %></td>
+        <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quote', new_quote_path %>

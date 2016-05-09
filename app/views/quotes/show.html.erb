@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @quote.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @quote.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @quote.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @quote.phone %>
+</p>
+
+<p>
+  <strong>Pick up date:</strong>
+  <%= @quote.pick_up_date %>
+</p>
+
+<p>
+  <strong>Origin city:</strong>
+  <%= @quote.origin_city %>
+</p>
+
+<p>
+  <strong>Origin state:</strong>
+  <%= @quote.origin_state %>
+</p>
+
+<p>
+  <strong>Origin zip:</strong>
+  <%= @quote.origin_zip %>
+</p>
+
+<p>
+  <strong>Destination city:</strong>
+  <%= @quote.destination_city %>
+</p>
+
+<p>
+  <strong>Destination state:</strong>
+  <%= @quote.destination_state %>
+</p>
+
+<p>
+  <strong>Destination zip:</strong>
+  <%= @quote.destination_zip %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @quote.year %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @quote.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @quote.model %>
+</p>
+
+<p>
+  <strong>Is operable:</strong>
+  <%= @quote.is_operable %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @quote.description %>
+</p>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>

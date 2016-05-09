@@ -6,7 +6,7 @@
     <%= f.input :last_name %>
     <%= f.input :email %>
     <%= f.input :phone %>
-    <%= f.input :pick_up_date %>
+    <%= f.input :pick_up_date, as: :date_picker, :label => "Requested pick-up date", input_html: {data: {date_options: {defaultDate: Date.today }}} %>
     <%= f.input :origin_city %>
     <%= f.input :origin_state %>
     <%= f.input :origin_zip %>

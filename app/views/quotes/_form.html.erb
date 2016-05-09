@@ -1,26 +1,47 @@
-<%= simple_form_for(@quote) do |f| %>
+<%= simple_form_for(@quote, html: {class: "form-group"}) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :email %>
-    <%= f.input :phone %>
-    <%= f.input :pick_up_date, as: :date_picker, :label => "Requested pick-up date", input_html: {data: {date_options: {defaultDate: Date.today }}} %>
-    <%= f.input :origin_city %>
-    <%= f.input :origin_state %>
-    <%= f.input :origin_zip %>
-    <%= f.input :destination_city %>
-    <%= f.input :destination_state %>
-    <%= f.input :destination_zip %>
-    <%= f.input :year %>
-    <%= f.input :make %>
-    <%= f.input :model %>
-    <%= f.input :is_operable %>
-    <%= f.input :description %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+<div class ="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title text-center">CONTACT INFORMATION</h3>
+      </div>
+      <div class="panel-body">
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :email %>
+        <%= f.input :phone %>
+        <%= f.input :pick_up_date, as: :date_picker, :label => "Requested pick-up date", input_html: {data: {date_options: {defaultDate: Date.today }}} %>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title text-center">DELIVERY INFORMATION</h3>
+      </div>
+      <div class="panel-body">
+        <%= f.input :origin_city %>
+        <%= f.input :origin_state %>
+        <%= f.input :origin_zip %>
+        <%= f.input :destination_city %>
+        <%= f.input :destination_state %>
+        <%= f.input :destination_zip %>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title text-center">VEHICLE INFORMATION</h3>
+      </div>
+      <div class="panel-body">
+        <%= f.input :year %>
+        <%= f.input :make %>
+        <%= f.input :model %>
+        <%= f.input :is_operable %>
+        <%= f.input :description %>
+      </div>
+    </div>
+      <%= f.button :submit, "SEND QUOTE REQUEST", class: "btn btn-success btn-block" %>
   </div>
+</div>
 <% end %>

@@ -1,0 +1,91 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Todays date</th>
+      <th>Date first available</th>
+      <th>Quote number</th>
+      <th>Amount quoted</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Origin first name</th>
+      <th>Origin last name</th>
+      <th>Origin city</th>
+      <th>Origin state</th>
+      <th>Origin zip</th>
+      <th>Origin home phone</th>
+      <th>Origin work phone</th>
+      <th>Origin cell phone</th>
+      <th>Destination first name</th>
+      <th>String</th>
+      <th>Destination last name</th>
+      <th>Destination city</th>
+      <th>Destination state</th>
+      <th>Destination zip</th>
+      <th>Destination home phone</th>
+      <th>Destination work phone</th>
+      <th>Destination cell phone</th>
+      <th>Year</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>License plate</th>
+      <th>Vin</th>
+      <th>Color</th>
+      <th>Is operable</th>
+      <th>Is oversied</th>
+      <th>Payment</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.todays_date %></td>
+        <td><%= order.date_first_available %></td>
+        <td><%= order.quote_number %></td>
+        <td><%= order.amount_quoted %></td>
+        <td><%= order.phone %></td>
+        <td><%= order.email %></td>
+        <td><%= order.origin_first_name %></td>
+        <td><%= order.origin_last_name %></td>
+        <td><%= order.origin_city %></td>
+        <td><%= order.origin_state %></td>
+        <td><%= order.origin_zip %></td>
+        <td><%= order.origin_home_phone %></td>
+        <td><%= order.origin_work_phone %></td>
+        <td><%= order.origin_cell_phone %></td>
+        <td><%= order.destination_first_name %></td>
+        <td><%= order.string %></td>
+        <td><%= order.destination_last_name %></td>
+        <td><%= order.destination_city %></td>
+        <td><%= order.destination_state %></td>
+        <td><%= order.destination_zip %></td>
+        <td><%= order.destination_home_phone %></td>
+        <td><%= order.destination_work_phone %></td>
+        <td><%= order.destination_cell_phone %></td>
+        <td><%= order.year %></td>
+        <td><%= order.make %></td>
+        <td><%= order.model %></td>
+        <td><%= order.license_plate %></td>
+        <td><%= order.vin %></td>
+        <td><%= order.color %></td>
+        <td><%= order.is_operable %></td>
+        <td><%= order.is_oversied %></td>
+        <td><%= order.payment %></td>
+        <td><%= order.description %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order', new_order_path %>

@@ -1,0 +1,41 @@
+<%= simple_form_for(@order) do |f| %>
+  <%= f.error_notification %>
+
+    <%= f.input :todays_date, as: :hidden %>
+    <%= f.input :date_first_available, as: :date_picker, :label => "Requested pick-up date", input_html: {data: {date_options: {defaultDate: Date.current }}} %>
+    <%= f.input :quote_number %>
+    <%= f.input :amount_quoted %>
+    <%= f.input :phone %>
+    <%= f.input :email %>
+    <%= f.input :origin_first_name %>
+    <%= f.input :origin_last_name %>
+    <%= f.input :origin_city %>
+    <%= f.input :origin_state %>
+    <%= f.input :origin_zip %>
+    <%= f.input :origin_home_phone %>
+    <%= f.input :origin_work_phone %>
+    <%= f.input :origin_cell_phone %>
+    <%= f.input :destination_first_name %>
+    <%= f.input :string %>
+    <%= f.input :destination_last_name %>
+    <%= f.input :destination_city %>
+    <%= f.input :destination_state %>
+    <%= f.input :destination_zip %>
+    <%= f.input :destination_home_phone %>
+    <%= f.input :destination_work_phone %>
+    <%= f.input :destination_cell_phone %>
+    <%= f.input :year %>
+    <%= f.input :make %>
+    <%= f.input :model %>
+    <%= f.input :license_plate %>
+    <%= f.input :vin %>
+    <%= f.input :color %>
+    <%= f.input :is_operable %>
+    <%= f.input :is_oversied %>
+    <%= f.input :payment %>
+    <%= f.input :description %>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

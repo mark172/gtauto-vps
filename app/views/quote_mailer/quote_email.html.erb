@@ -25,11 +25,7 @@
     <p>Year: <strong><%= "#{@year}" %></strong></p>
     <p>Make: <strong><%= "#{@make}" %></strong></p>
     <p>Model: <strong><%= "#{@model}" %></strong></p>
-    <% if @is_operable == true %>
-      <p>Is car operable? <strong>Yes</strong></p>
-    <% else %>
-      <p>Is car operable? <strong>No</strong></p>
-    <% end %>
+    <p>Is car operable?: <strong><%= "#{@is_operable}" %></strong></p>
     <p>Extra information: <%= "#{@description}" %></p>
   </body>
 </html>

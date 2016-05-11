@@ -12,7 +12,7 @@
     <p>Phone: <strong><%= "#{@phone}" %></strong></p>
     <br>
     <h3>Delivery Information</h3>
-    <p>Pick up date: <strong><%= "#{@pick_up_date}" %></strong></p>
+    <p>Pick up date: <strong><%= "#{Date.parse(@pick_up_date).strftime("%B %e, %Y")}" %></strong></p>
     <p>Origin city: <strong><%= "#{@origin_city}" %></strong></p>
     <p>Origin state: <strong><%= "#{@origin_state}" %></strong></p>
     <p>Origin zip: <strong><%= "#{@origin_zip}" %></strong></p>

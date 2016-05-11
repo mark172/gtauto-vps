@@ -46,7 +46,7 @@ class QuotesController < ApplicationController
         is_operable = params[:quote][:is_operable]
         description = params[:quote][:description]
         
-        QuoteMailer.quote_email(first_name, last_name, email, phone, pick_up_date, origin_city, origin_state, origin_zip, destination_city, destination_state, destination_zip, year, make, model, is_operable, description).deliver
+        QuoteMailer.quote_email(first_name, last_name, email, phone, pick_up_date, origin_city, origin_state, origin_zip, destination_city, destination_state, destination_zip, year, make, model, is_operable, description).deliver_now
         
         format.html { redirect_to @quote, notice: 'Your quote request was successfully sent.' }
         format.json { render :show, status: :created, location: @quote }

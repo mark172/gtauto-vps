@@ -18,6 +18,6 @@ class QuoteMailer < ActionMailer::Base
         @is_operable = is_operable
         @description = description
         
-        mail(from: 'quote@qtautomotive.com', subject: 'New Quote Request')
+        mail(from: 'no-reply@qtautomotive.com', subject: 'New Quote Request')
     end
 end

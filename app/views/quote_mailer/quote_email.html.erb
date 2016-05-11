@@ -3,22 +3,36 @@
   <head>
   </head>
   <body>
-    <p>You have received a new quote request from <%= "#{ @first_name }, #{ @last_name }." %></p>
-    <p><%= @first_name %></p>
-    <p><%= @last_name %></p>
-    <p><%= @email %></p>
-    <p><%= @phone %></p>
-    <p><%= @pick_up_date %></p>
-    <p><%= @origin_city %></p>
-    <p><%= @origin_state %></p>
-    <p><%= @origin_zip %></p>
-    <p><%= @destination_city %></p>
-    <p><%= @destination_state %></p>
-    <p><%= @destination_zip %></p>
-    <p><%= @year %></p>
-    <p><%= @make %></p>
-    <p><%= @model %></p>
-    <p><%= @is_operable %></p>
-    <p><%= @description %></p>
+    <p>You have received a new quote request from, <strong><%= "#{ @first_name } #{ @last_name }." %></strong></p>
+    <br>
+    <h3>Contact info</h3>
+    <hr>
+    <p>First name: <strong><%= @first_name %></strong></p>
+    <p>Last Name: <strong><%= @last_name %></strong></p>
+    <p>Email: <strong><%= @email %></strong></p>
+    <p>Phone: <strong><%= @phone %></strong></p>
+    <br>
+    <h3>Delivery information</h3>
+    <hr>
+    <p>Pick up date: <strong><%= @pick_up_date %></strong></p>
+    <p>Origin city: <strong><%= @origin_city %></strong></p>
+    <p>Origin state: <strong><%= @origin_state %></strong></p>
+    <p>Origin zip: <strong><%= @origin_zip %></strong></p>
+    <br>
+    <p>Destination city: <strong><%= @destination_city %></strong></p>
+    <p>Destination state: <strong><%= @destination_state %></strong></p>
+    <p>Destination zip: <strong><%= @destination_zip %></strong></p>\
+    <br>
+    <h3>Vehichle information</h3>
+    <hr>
+    <p>Year: <strong><%= @year %></strong></p>
+    <p>Make: <strong><%= @make %></strong></p>
+    <p>Model: <strong><%= @model %></strong></p>
+    <% if @is_operable == true %>
+      <p>Is car operble?: <strong>Yes</strong></p>
+    <% else %>
+      <p>Is car operble?: <strong>Yes</strong></p>
+    <% end %>
+    <p>Extra information: <%= @description %></p>
   </body>
 </html>

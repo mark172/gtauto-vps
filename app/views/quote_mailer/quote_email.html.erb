@@ -14,18 +14,21 @@
     <h3>Delivery Information</h3>
     <p>Pick up date: <strong><%= "#{@pick_up_date}" %></strong></p>
     <p>Origin city: <strong><%= "#{@origin_city}" %></strong></p>
-    <p>Origin state: <strong><<%= "#{@origin_state}" %></strong></p>
+    <p>Origin state: <strong><%= "#{@origin_state}" %></strong></p>
     <p>Origin zip: <strong><%= "#{@origin_zip}" %></strong></p>
     <br>
     <p>Destination city: <strong><%= "#{@destination_city}" %></strong></p>
     <p>Destination state: <strong><<%= "#{@destination_state}" %></strong></p>
-    <p>Destination zip: <strong><<%= "#{@destination_zip}" %></strong></p>
+    <p>Destination zip: <strong><%= "#{@destination_zip}" %></strong></p>
     <br>
     <h3>Vehichle Iinformation</h3>
     <p>Year: <strong><%= "#{@year}" %></strong></p>
     <p>Make: <strong><%= "#{@make}" %></strong></p>
     <p>Model: <strong><%= "#{@model}" %></strong></p>
-    <p>Is car operable? <%= "#{@is_operable}" %></p>
+    <% if @is_operable == true %>
+      <p>Is car operable? <strong>Yes</strong></p>
+    <% else %>
+      <p>Is car operable? <strong>No</strong></p>
     <p>Extra information: <%= "#{@description}" %></p>
   </body>
 </html>

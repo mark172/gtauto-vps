@@ -28,7 +28,27 @@ class QuotesController < ApplicationController
 
     respond_to do |format|
       if @quote.save
-        format.html { redirect_to @quote, notice: 'Quote was successfully created.' }
+        
+        first_name = params[:quote][:first_name]
+        last_name = params[:quote][:last_name]
+        phone = params[:quote][:phone]
+        email = params[:quote][:email]
+        pick_up_date = params[:quote][:pick_up_date]
+        origin_city = params[:quote][:origin_city]
+        origin_state = params[:quote][:origin_state]
+        origin_zip = params[:quote][:origin_zip]
+        destination_city = params[:quote][:destination_city]
+        destination_state = params[:quote][:destination_state]
+        destination_zip = params[:quote][:destination_zip]
+        year = params[:quote][:year]
+        make = params[:quote][:make]
+        model = params[:quote][:model]
+        is_operable = params[:quote][:is_operable]
+        description = params[:quote][:description]
+        
+        QuoteMailer.quote_email(first_name, last_name, email, phone, pick_up_date, origin_city, origin_state, origin_zip, destination_city, destination_state, destination_zip, year, make, model, is_operable, description).deliver
+        
+        format.html { redirect_to @quote, notice: 'Your quote request was successfully sent.' }
         format.json { render :show, status: :created, location: @quote }
       else
         format.html { render :new }

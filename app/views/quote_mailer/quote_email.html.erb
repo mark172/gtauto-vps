@@ -3,7 +3,7 @@
   <head>
   </head>
   <body>
-    <p>You have received a new quote request from, <strong><%= "#{ @first_name }, #{ @last_name }." %></strong></p>
+    <p>You have received a new quote request from, <strong><%= "#{ @first_name } #{ @last_name }." %></strong></p>
     <br>
     <h3>Contact info</h3>
     <hr>
@@ -28,11 +28,7 @@
     <p>Year: <strong><%= @year %></strong></p>
     <p>Make: <strong><%= @make %></strong></p>
     <p>Model: <strong><%= @model %></strong></p>
-    <% if @is_operable == true %>
-      <p>Is car operble?: <strong>Yes</strong></p>
-    <% else %>
-      <p>Is car operble?: <strong>No</strong></p>
-    <% end %>
+    <p>Is car operable? <%= @is_operable %></p>
     <p>Extra information: <%= @description %></p>
   </body>
 </html>

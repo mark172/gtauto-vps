@@ -51,7 +51,7 @@ class QuotesController < ApplicationController
         format.html { redirect_to @quote, notice: 'Your quote request was successfully sent.' }
         format.json { render :show, status: :created, location: @quote }
       else
-        format.html { render :new }
+        format.html { render :new, notice: "Unable to send message." }
         format.json { render json: @quote.errors, status: :unprocessable_entity }
       end
     end

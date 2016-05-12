@@ -9,11 +9,11 @@
         <h3 class="panel-title text-center">CONTACT INFORMATION</h3>
       </div>
       <div class="panel-body">
-        <%= f.input :first_name, required: true, label: false, placeholder: "First name", input_html: {class: "form-control"} %>
-        <%= f.input :last_name, required: true, label: false, placeholder: "Last name", input_html: {class: "form-control"} %>
-        <%= f.input :email, required: true, label: false, placeholder: "Email", input_html: {class: "form-control"} %>
-        <%= f.input :phone, required: true, label: false, placeholder: "Phone", input_html: {class: "form-control"} %>
-        <%= f.input :pick_up_date, as: :date_picker, :label => "Requested pick-up date", placeholder: "Select a date"%>
+        <%= f.input :first_name, required: true, label: false, placeholder: "First name (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :last_name, required: true, label: false, placeholder: "Last name (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :email, required: true, label: false, placeholder: "Email (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :phone, required: true, label: false, placeholder: "Phone (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :pick_up_date, as: :date_picker, label: false, placeholder: "Select a pick-up date (Required)"%>
       </div>
     </div>
     <div class="panel panel-primary">
@@ -21,12 +21,12 @@
         <h3 class="panel-title text-center">DELIVERY INFORMATION</h3>
       </div>
       <div class="panel-body">
-        <%= f.input :origin_city, required: true, label: false, placeholder: "Origin city", input_html: {class: "form-control"} %>
-        <%= f.input :origin_state, required: true, label: false, placeholder: "Origin state", input_html: {class: "form-control"} %>
-        <%= f.input :origin_zip, required: true, label: false, placeholder: "Origin zip code", input_html: {class: "form-control"} %>
-        <%= f.input :destination_city, required: true, label: false, placeholder: "Destination city", input_html: {class: "form-control"} %>
-        <%= f.input :destination_state, required: true, label: false, placeholder: "Destination state", input_html: {class: "form-control"} %>
-        <%= f.input :destination_zip, required: true, label: false, placeholder: "Destination zip code", input_html: {class: "form-control"} %>
+        <%= f.input :origin_city, required: true, label: false, placeholder: "Origin city (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :origin_state, required: true, label: false, :collection => ::States.sort.map {|k,v| [v,k]}, prompt: 'Select state (Required)', input_html: {class: "form-control"} %>
+        <%= f.input :origin_zip, required: true, label: false, placeholder: "Origin zip code (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :destination_city, required: true, label: false, placeholder: "Destination city (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :destination_state, required: true, label: false, :collection => ::States.sort.map {|k,v| [v,k]}, prompt: 'Select state (Required)', input_html: {class: "form-control"} %>
+        <%= f.input :destination_zip, required: true, label: false, placeholder: "Destination zip code (Required)", input_html: {class: "form-control"} %>
       </div>
     </div>
     <div class="panel panel-primary">
@@ -34,9 +34,9 @@
         <h3 class="panel-title text-center">VEHICLE INFORMATION</h3>
       </div>
       <div class="panel-body">
-        <%= f.input :year, label: false, collection: 2016.downto(1900), prompt: 'Select year', :input_html => { :class => ""} %>
-        <%= f.input :make, required: true, label: false, placeholder: "Make", input_html: {class: "form-control"} %>
-        <%= f.input :model, required: true, label: false, placeholder: "Model", input_html: {class: "form-control"} %>
+        <%= f.input :year, label: false, collection: 2016.downto(1900), prompt: 'Select year (Required)', :input_html => { :class => "form-control"} %>
+        <%= f.input :make, required: true, label: false, placeholder: "Make (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :model, required: true, label: false, placeholder: "Model (Required)", input_html: {class: "form-control"} %>
         <p><strong>Does this vehicle run?</strong></p><%= f.collection_radio_buttons :is_operable, [[true, 'Yes'] ,[false, 'No']], :first, :last, :checked => true, required: true, :label => "Does it run", input_html: {class: "form-control"} %>
         <%= f.input :description, label: false, placeholder: "Enter details", input_html: {class: "form-control"} %>
       </div>

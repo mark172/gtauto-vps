@@ -13,8 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require deluxer/jquery.bxslider-rahisified
 //= require turbolinks
 //= require moment
 //= require bootstrap-datetimepicker
 //= require pickers
+//= require deluxer/highlight.pack
+//= require deluxer/html5shiv
+//= require deluxer/jquery-scrollto
+//= require deluxer/jquery.prettyPhoto
+//= require deluxer/jquery.quicksand
+//= require deluxer/respond.min
+//= require deluxer/theme
+//= require deluxer/wow.min
 //= require_tree .

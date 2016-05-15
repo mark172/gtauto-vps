@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  *= require bootstrap-datetimepicker
+ *= require font-awesome
+ *= require themify-icons
+ *= require deluxer/uikit
+ *= require deluxer/animate.min
+ *= require deluxer/hl-default
+ *= require deluxer/prettyPhoto
  */
 
 input[type="radio"], input[type="checkbox"] {

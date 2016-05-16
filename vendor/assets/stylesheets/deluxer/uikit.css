@@ -164,20 +164,19 @@
   -ms-background-size: cover!important;
   background-size: cover!important; }
 
-.cover-1-bg {
-  background-image: url("/assets/backgrounds/cover1.jpg") no-repeat center 0 fixed; }
+/*.cover-1-bg {*/
+/*  background-image: url("/assets/backgrounds/cover1.jpg") no-repeat center 0 fixed; }*/
 
-.cover-2-bg {
-  background-image: url("/assets/backgrounds/cover2.jpg") no-repeat center 0 fixed; }
+/*.cover-2-bg {*/
+/*  background-image: url("/assets/backgrounds/cover2.jpg") no-repeat center 0 fixed; }*/
 
-.cover-3-bg {
-  background: url("assets/backgrounds/cover3.jpg") no-repeat center 0 fixed; }
+/*.cover-3-bg {*/
+/*  background: url("assets/backgrounds/cover3.jpg") no-repeat center 0 fixed; }*/
 
-.cover-4-bg {
-  background: url("assets/backgrounds/cover4.jpg") no-repeat center 0 fixed; }
+/*.cover-4-bg {*/
+/*  background: image-url("assets/backgrounds/cover4.jpg") no-repeat center 0 fixed; }*/
 
-.page-bg {
-  background-image: url('backgrounds/cover1.jpg') no-repeat center 0 fixed; }
+.page-bg { background: url('/assets/backgrounds/mapBG.jpg') no-repeat center 0 fixed; }
 
 /* UTILITY CLASSES
 ------------------------------------------- */

@@ -1,7 +1,7 @@
 <%= simple_form_for(@quote, html: {class: "form-group"}) do |f| %>
   <%= f.error_notification %>
 
-<div class="form-panel width-70pc fullw-xs hcenter">
+<div class="">
 <div class ="row">
   <div class="col-md-8 col-md-offset-2">
     <div class="panel panel-primary">
@@ -41,7 +41,7 @@
         <%= f.input :description, label: false, placeholder: "Enter details", input_html: {class: "form-control"} %>
       </div>
     </div>
-      <%= f.button :submit, "SEND QUOTE REQUEST", class: "btn btn-success btn-block" %>
+      <%= f.button :submit, "SEND QUOTE REQUEST", class: "tn btn-primary btn-bigger btn-block" %>
   </div>
 </div>
 </div>

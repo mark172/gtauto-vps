@@ -19,6 +19,7 @@
  *= require deluxer/animate.min
  *= require deluxer/hl-default
  *= require deluxer/prettyPhoto
+ *= require bootstrap_and_overrides
  */
 
 input[type="radio"], input[type="checkbox"] {

@@ -1,11 +1,4 @@
-<!-- Preloader 
-============================================ -->
-<div class="page-preloader">
-  <div class="vcenter"></div>
-  
-</div>
-<!-- /Preloader 
-============================================ --> 
+
 
 <!-- Page Wrapper
 ++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -37,7 +30,7 @@
           <li class="hidden-xs"><a href="#">follow us</a></li>
           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
           <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://twitter.com/gtautotrans"><i class="fa fa-twitter"></i></a></li>
         </ul>
         <!-- /Navbar right -->
         
@@ -84,10 +77,10 @@
       
         <!-- Navbar Right -->
         <ul class="nav navbar-nav navbar-right case-u">
-          <li class="active"><a href="index.html">home</a></li>
-          <li class="active"><a href="index.html">home</a></li>
-          <li class="active"><a href="index.html">home</a></li>
-          <li class="active"><a href="index.html">home</a></li>
+          <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "home", root_path %></li>
+          <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "about us", about_path %></li>
+          <li class=""><a href="index.html">home</a></li>
+          <li class=""><a href="index.html">home</a></li>
         </ul>
         <!-- /Navbar right -->
       </div>

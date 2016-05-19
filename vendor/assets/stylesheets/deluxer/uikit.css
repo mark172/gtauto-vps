@@ -1992,7 +1992,7 @@ input[type="checkbox"] {
   .hnav.invert-colors .navbar-nav.borders-lr > li > a, .hnav.invert-colors .navbar-nav.borders-l > li > a, .hnav.invert-colors .navbar-nav.borders-r > li > a {
     border-color: rgba(255, 255, 255, 0.2) !important; }
   .hnav.invert-colors .navbar-nav > li > a {
-    color: rgba(255, 255, 255, 0.8); }
+    color: #fcda31; }
   .hnav.invert-colors .navbar-nav > li:hover > a, .hnav.invert-colors .navbar-nav > li.active > a {
     color: #fff; }
 

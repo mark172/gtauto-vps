@@ -6,4 +6,16 @@ class PagesController < ApplicationController
   def about
     
   end
+  
+  def download_pdf
+    send_file(
+      "#{Rails.root}/public/t_and_c.pdf",
+      filename: "terms_and_conditions.pdf",
+      type: "application/pdf"
+    )
+  end
+  
+  def terms_and_conditions
+    
+  end
 end

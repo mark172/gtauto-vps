@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#index'
   get '/about' => 'pages#about' 
+  get "/pages/download_pdf" => 'pages#download_pdf'
+  get '/terms_and_conditions' => 'pages#terms_and_conditions'
 
   resources :orders
   resources :quotes

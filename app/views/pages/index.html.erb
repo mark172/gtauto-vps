@@ -26,7 +26,7 @@
                     <div class="text">
                       <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">We ship cars, trucks, boats &amp motorcycles</h1>
                       <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">In every aspect of our service, we strive to deliver the highest level of service to our customers!</p>
-                      <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">learn more</a>
+                      <%= link_to "learn more", about_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
                     </div>
                     <!-- /Text -->
                     <img class="img-main" src="assets/gtauto/carYellowNew.png" alt=""/>
@@ -39,7 +39,7 @@
                     <div class="text">
                       <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">quick quote form</h1>
                       <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get started with your vehicle transport, please fill out the quote form. If at any time you have questions or run into trouble please call our Sales office, toll free, at 1-208-350-8590.</p>
-                      <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">get a quote</a>
+                      <%= link_to "get a free quote", new_quote_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
                     </div>
                     <!-- /Text -->
                     <img class="img-main" src="assets/gtauto/f150.png" alt=""/>
@@ -56,7 +56,7 @@
                       <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">learn more</a>
                     </div>
                     <!-- /Text -->
-                    <img class="img-main" src="assets/screen-4.png" alt="" />
+                    <img class="img-main" src="assets/gtauto/harley.png" alt="" />
                   </div>
                   <!-- /Slide -->
                   
@@ -119,8 +119,17 @@
           
           <!-- Section Title -->
           <div class="section-title">
-            <h2>Our services</h2>
-            <p>We are experts in both desktop and mobile design.</p>
+            <h2>Door-to-Door Service | Open and Enclosed Transport | Competitive Rates</h2>
+            <p><strong>GT Auto Transport</strong>, Inc offers the highest standard of carriers that are honest, 
+            reliable, licensed, and insured! Whether you’re a dealer or individual we work to 
+            provide you with the most satisfying auto transportation services. No matter if, it’s 
+            across the state or coast to coast. With GT Auto Transport, Inc you will find a level of
+            customer service that exceeds the industry standards. At GT Auto Transport, Inc we 
+            understand that price is a major factor, here we will work to get you the lowest price
+            with best service. We provide door-to-door service and many discounts such as military,
+            senior citizens, multi-car, and return customer. GT Auto Transport, Inc can help arrange 
+            your car shipping with safe and reliable auto shipper service! Use the link (Quick Quote)
+            or contact us to request a free quote today from local auto transportation companies.</p>
           </div>
           <!-- /Section Title -->
           

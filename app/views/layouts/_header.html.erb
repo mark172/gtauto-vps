@@ -79,8 +79,8 @@
         <ul class="nav navbar-nav navbar-right case-u">
           <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "home", root_path %></li>
           <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "about us", about_path %></li>
-          <li class=""><a href="index.html">home</a></li>
-          <li class=""><a href="index.html">home</a></li>
+          <li class="<%= 'active' if current_page?(new_quote_path) %>"><%= link_to "free quote", new_quote_path %></li>
+          <li class="<%= 'active' if current_page?(terms_and_conditions_path) %>"><%= link_to "terms and agreement", terms_and_conditions_path %></li>
         </ul>
         <!-- /Navbar right -->
       </div>

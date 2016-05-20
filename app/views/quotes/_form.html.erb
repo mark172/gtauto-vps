@@ -9,10 +9,30 @@
         <h3 class="panel-title text-center">CONTACT INFORMATION</h3>
       </div>
       <div class="panel-body">
-        <%= f.input :first_name, required: true, label: false, placeholder: "First name (Required)", input_html: {class: "form-control"} %>
-        <%= f.input :last_name, required: true, label: false, placeholder: "Last name (Required)", input_html: {class: "form-control"} %>
-        <%= f.input :email, required: true, label: false, placeholder: "Email (Required)", input_html: {class: "form-control"} %>
-        <%= f.input :phone, required: true, label: false, placeholder: "Phone (Required)", input_html: {class: "form-control"} %>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-user"></i></div>
+            <%= f.input :first_name, required: true, label: false, placeholder: "First name (Required)", input_html: {class: "form-control"} %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-user"></i></div>
+            <%= f.input :last_name, required: true, label: false, placeholder: "Last name (Required)", input_html: {class: "form-control"} %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+            <%= f.input :email, required: true, label: false, placeholder: "Email (Required)", input_html: {class: "form-control"} %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+            <%= f.input :phone, required: true, label: false, placeholder: "Phone (Required)", input_html: {class: "form-control"} %>
+          </div>
+        </div>
         <%= f.input :pick_up_date, as: :date_picker, label: false, placeholder: "Select a pick-up date (Required)"%>
       </div>
     </div>
@@ -38,7 +58,7 @@
         <%= f.input :make, required: true, label: false, placeholder: "Make (Required)", input_html: {class: "form-control"} %>
         <%= f.input :model, required: true, label: false, placeholder: "Model (Required)", input_html: {class: "form-control"} %>
         <p><strong>Does this vehicle run?</strong></p><%= f.collection_radio_buttons :is_operable, [[true, 'Yes'] ,[false, 'No']], :first, :last, :checked => true, required: true, :label => "Does it run", input_html: {class: "form-control"} %>
-        <%= f.input :description, label: false, placeholder: "Enter details", input_html: {class: "form-control"} %>
+        <%= f.input :description, label: false, placeholder: "Enter details", input_html: {class: "form-control", rows: "10"} %>
       </div>
     </div>
       <%= f.button :submit, "SEND QUOTE REQUEST", class: "tn btn-primary btn-bigger btn-block" %>

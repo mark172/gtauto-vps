@@ -15,10 +15,10 @@
  *= require bootstrap-datetimepicker
  *= require font-awesome
  *= require themify-icons
- *= require deluxer/uikit
- *= require deluxer/animate.min
- *= require deluxer/hl-default
- *= require deluxer/prettyPhoto
+ *= require uikit
+ *= require animate.min
+ *= require hl-default
+ *= require prettyPhoto
  *= require bootstrap_and_overrides
  */
 

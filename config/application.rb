@@ -10,6 +10,7 @@ module GtAutoTransport
   class Application < Rails::Application
     # config.assets.paths << Rails.root.join("vendor","assets", "fonts")
     # config.assets.paths << Rails.root.join("vendor","assets", "images")
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.serve_static_files = true
     config.assets.enabled = true
     # Settings in config/environments/* take precedence over those specified here.

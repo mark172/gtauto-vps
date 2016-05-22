@@ -19,51 +19,18 @@
       <div class="row-fluid">
         <!-- Col -->
         <div class="col-xs-6 col-sm-3 col-md-3">
-          <h5>guest</h5>
-          <ul class="v-links">
-            <li><a href="#">login</a></li>
-            <li><a href="#">sign up</a></li>
-            <li><a href="#">customer support</a></li>
-            <li><a href="#">information</a></li>
-          </ul>
-        </div>
-        <!-- Col -->
-        
-        <!-- Col -->
-        <div class="col-xs-6 col-sm-3 col-md-3">
           <h5>information</h5>
           <ul class="v-links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Delivery Informations</a></li>
-            <li><a href="#">Terms and conditions</a></li>
-            <li><a href="#">Return Policy</a></li>
-            <li><a href="#">Shipping and Deliveries</a></li>
-            <li><a href="#">Enquiries</a></li>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About Us", about_path %></li>
+            <li><%= link_to "Free Quote", new_quote_path %></li>
+            <li><%= link_to "Terms and Agreement", terms_and_conditions_path %></li>
           </ul>
         </div>
-        <!-- /Col -->
-        
         <!-- Col -->
-        <div class="col-xs-6 col-sm-3 col-md-3">
-          <h5>member</h5>
-          <ul class="v-links">
-            <li><a href="#">Account</a></li>
-            <li><a href="#">Wishlist and Favourites</a></li>
-            <li><a href="#">Purchase History</a></li>
-            <li><a href="#">View Cart</a></li>
-          </ul>
-        </div>
-        <!-- /Col -->
         
-        <!-- Col -->
-        <div class="col-xs-6 col-sm-3 col-md-3 newsletter">
-          <h5>newsletter</h5>
-          <form>
-            <input type="text" class="form-control" placeholder="Email Address">
-            <button class="btn btn-primary" type="button">get newsletter</button>
-          </form>
-        </div>
-        <!-- /Col -->
+        
+        
      </div>
      <!-- /Row -->
     </div>
@@ -79,10 +46,9 @@
       <span class="copy-text">&copy; 2016 GT Auto Transport</span>
       <ul class="payment-methods clearfix">
         <li><%= image_tag "/assets/cards/visa.png" %></li>
-        <li><img alt="card" src="assets/cards/paypal.png"></li>
-        <li><img alt="card" src="assets/cards/mastercard.png"></li>
-        <li><img alt="card" src="assets/cards/cirrus.png"></li>
-        <li><img alt="card" src="assets/cards/visa-debit.png"></li>
+        <li><%= image_tag "/assets/cards/paypal.png" %></li>
+        <li><%= image_tag "/assets/cards/mastercard.png" %></li>
+        <li><%= image_tag "/assets/cards/express.png" %></li>
       </ul>
     </div>
     <!-- /Container -->

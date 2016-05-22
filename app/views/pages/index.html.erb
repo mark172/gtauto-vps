@@ -38,7 +38,7 @@
                     <!-- Text -->
                     <div class="text">
                       <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">quick quote form</h1>
-                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get started with your vehicle transport, please fill out the quote form. If at any time you have questions or run into trouble please call our Sales office, toll free, at 1-208-350-8590.</p>
+                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get started with your vehicle transport, please fill out the quote form. If at any time you have questions or run into trouble please call our Sales office, toll free, at <strong>1-208-350-8590</strong>.</p>
                       <%= link_to "get a free quote", new_quote_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
                     </div>
                     <!-- /Text -->
@@ -50,10 +50,9 @@
                   <div class="slide">
                     <!-- Text -->
                     <div class="text">
-                      <small class="pcolor case-u bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="400">portable</small>
-                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">reusable blocks</h1>
-                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
-                      <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">learn more</a>
+                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">order form</h1>
+                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get started with your vehicle transport, please click the button below and out the form. If at any time you have any questions or run into any trouble please call our Sales office, toll free, at <strong>1-208-350-8590</strong>.</p>
+                      <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">start an order</a>
                     </div>
                     <!-- /Text -->
                     <img class="img-main" src="assets/gtauto/harley.png" alt="" />
@@ -64,10 +63,9 @@
                   <div class="slide">
                     <!-- Text -->
                     <div class="text">
-                      <small class="pcolor case-u bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="400">purchase once</small>
-                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">free updates</h1>
-                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
-                      <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">learn more</a>
+                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">order status</h1>
+                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get the status of your order we ask that you either click the button and fill out a tracking form, e-mail status@gtautotransport.com directly or call <strong>1-208-350-8590</strong>.</p>
+                      <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">track shipment</a>
                     </div>
                     <!-- /Text -->
                     <img class="img-main" src="assets/gtauto/boat.png" alt=""/>
@@ -90,8 +88,8 @@
                   <!-- Pager -->
                   <div id="intro-pager" class="tab-pager">
                     <a data-slide-index="0" href="#"><i class="icon fa  fa-arrow-right"></i><span>About Us</span></a>
-                    <a data-slide-index="1" href="#"><i class="icon fa fa-arrow-right"></i><span>Online Quote Form</span></a>
-                    <a data-slide-index="2" href="#"><i class="icon fa fa-arrow-right"></i><span>online order form</span></a>
+                    <a data-slide-index="1" href="#"><i class="icon fa fa-arrow-right"></i><span>Quote Form</span></a>
+                    <a data-slide-index="2" href="#"><i class="icon fa fa-arrow-right"></i><span>order form</span></a>
                     <a data-slide-index="3" href="#"><i class="icon fa fa-arrow-right"></i><span>tracking</span></a>
                   </div>
                   <!-- /Pager -->
@@ -128,7 +126,7 @@
             understand that price is a major factor, here we will work to get you the lowest price
             with best service. We provide door-to-door service and many discounts such as military,
             senior citizens, multi-car, and return customer. GT Auto Transport, Inc can help arrange 
-            your car shipping with safe and reliable auto shipper service! Use the link (Quick Quote)
+            your car shipping with safe and reliable auto shipper service! Use the link (<%= link_to "Quick Quote", new_quote_path %>)
             or contact us to request a free quote today from local auto transportation companies.</p>
           </div>
           <!-- /Section Title -->

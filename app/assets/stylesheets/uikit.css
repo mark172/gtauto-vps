@@ -1,8 +1,8 @@
-@import url("/assets/roboto/roboto.css");
-@import url("/assets/roboto-cond/roboto-cond.css");
-@import url("/assets/deluxer/animate.min.css");
-@import url("/assets/deluxer/hl-default.css");
-@import url("/assets/deluxer/prettyPhoto.css");
+@import url("roboto/roboto.css");
+@import url("roboto-cond/roboto-cond.css");
+@import url("animate.min.css");
+@import url("hl-default.css");
+@import url("prettyPhoto.css");
 .font-roboto {
   font-family: "Roboto"; }
 

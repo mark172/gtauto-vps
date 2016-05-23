@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about' 
   get "/pages/download_pdf" => 'pages#download_pdf'
   get '/terms_and_conditions' => 'pages#terms_and_conditions'
+  get '/faqs' => 'pages#faqs'
 
   resources :orders
   resources :quotes

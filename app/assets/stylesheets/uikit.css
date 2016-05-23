@@ -2429,11 +2429,11 @@ section-title.invert-colors, .dark-bg .section-title {
     width: 100%;
     left: 0;
     height: 45px;
-    background: url("../images/shadow-bottom.png") no-repeat center top;
+    background: url("assets/images/shadow-bottom.png") no-repeat center top;
     z-index: 100; }
 
 .tshadow-top:after, .tshadow-bottom:after {
-  background: url("../images/shadow-top.png") no-repeat center top; }
+  background: url("assets/images/shadow-top.png") no-repeat center top; }
 
 .bshadow-bottom:after, .tshadow-bottom:after {
   bottom: 0;

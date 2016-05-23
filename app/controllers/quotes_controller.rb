@@ -27,8 +27,8 @@ class QuotesController < ApplicationController
     @quote = Quote.new(quote_params)
 
     respond_to do |format|
-      if @quote.save
-        
+      if verify_recaptcha(model: @quote) && @quote.save
+
         first_name = params[:quote][:first_name]
         last_name = params[:quote][:last_name]
         phone = params[:quote][:phone]
@@ -52,7 +52,7 @@ class QuotesController < ApplicationController
         format.html { redirect_to new_quote_path }
         format.json { render :show, status: :created, location: @quote }
       else
-        flash[:error] = "Unable to send message. Please call us."
+        flash[:danger] = "Unable to send message. Please verify you're a human with the captcha box."
         format.html { render :new}
         format.json { render json: @quote.errors, status: :unprocessable_entity }
       end

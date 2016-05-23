@@ -32,6 +32,8 @@ gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: '
 gem "font-awesome-rails"
 gem 'themify-icons-rails'
 
+gem "recaptcha", require: "recaptcha/rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

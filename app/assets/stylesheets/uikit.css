@@ -4212,7 +4212,7 @@ ul.tags {
     z-index: 100; }
   @media (max-width: 767px) {
     .intro-slider .slide {
-      font-size: 12px; }
+      font-size: 10px; }
       .intro-slider .slide .text {
         margin-top: 4em; }
       .intro-slider .slide p {

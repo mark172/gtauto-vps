@@ -48,10 +48,12 @@ class QuotesController < ApplicationController
         
         QuoteMailer.quote_email(first_name, last_name, email, phone, pick_up_date, origin_city, origin_state, origin_zip, destination_city, destination_state, destination_zip, year, make, model, is_operable, description).deliver_now
         
-        format.html { redirect_to new_quote_path, flash[:success] = "Welcome to the Sample App!" }
+        flash[:success] = "Your quote request was successfully sent."
+        format.html { redirect_to new_quote_path }
         format.json { render :show, status: :created, location: @quote }
       else
-        format.html { render :new, notice: "Unable to send message." }
+        flash[:error] = "Unable to send message. Please call us."
+        format.html { render :new}
         format.json { render json: @quote.errors, status: :unprocessable_entity }
       end
     end

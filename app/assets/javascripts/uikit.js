@@ -7,4 +7,3 @@
 // @koala-append "jquery.prettyPhoto.js",
 // @koala-append "wow.min.js",
 // @koala-append "theme.js",
-// @koala-append "style-switcher.js",

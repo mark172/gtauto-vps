@@ -1,7 +1,7 @@
 $(document).on('ready page:change', function() {
   $('.datetimepicker').datetimepicker({
     // put here your custom picker options, that should be applied for all pickers
-
+    minDate : 'now'
   });
 
   $('.datetimerange').each(function(){

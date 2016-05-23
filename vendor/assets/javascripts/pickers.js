@@ -1,7 +1,8 @@
 $(document).on('ready page:change', function() {
   $('.datetimepicker').datetimepicker({
     // put here your custom picker options, that should be applied for all pickers
-    minDate : 'now'
+    minDate : 'now',
+    ignoreReadonly: true
   });
 
   $('.datetimerange').each(function(){

@@ -32,7 +32,7 @@
             <%= f.input :phone, required: true, label: false, placeholder: "Phone xxx-xxx-xxxx (Required)", input_html: {class: "form-control"} %>
           </div>
         </div>
-        <%= f.input :pick_up_date, as: :date_picker, label: false, placeholder: "Select a pick-up date (Required)"%>
+        <%= f.input :pick_up_date, as: :date_picker, readonly: true, label: false, placeholder: "Select a pick-up date (Required)" %>
       </div>
     </div>
     <div class="panel panel-primary">

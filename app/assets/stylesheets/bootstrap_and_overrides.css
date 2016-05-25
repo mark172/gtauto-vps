@@ -124,3 +124,9 @@
   font-size: 16px;
   color: #FCDA31;
 }
+
+.orderPayment {
+  margin-bottom: 15px;
+  background: #f1dcdc;
+  padding: 5px;
+}

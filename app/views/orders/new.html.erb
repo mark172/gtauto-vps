@@ -1,5 +1,47 @@
-<h1>New Order</h1>
+<!-- Intro Block
+============================================ -->
+<div class="intro-block intro-page light-bg">
 
-<%= render 'form' %>
+  <!-- Container -->
+  <div class="container cont-main">
+    <!-- Section Title -->
+    <div class="section-title no-margin-b">
+      <h2>order form</h2>
+      <p class="width-50pc">To get started with your vehicle transport, please fill out the form below. If at any time you have any questions or run into any trouble please call our Sales office, toll free, at <strong>1-208-350-8590</strong>.</p>
+    </div>
+    <!-- /Section Title -->
+  </div>
+  <!-- /Container -->
 
-<%= link_to 'Back', orders_path %>
+</div>
+<!-- /Intro Block
+============================================ -->
+
+<!-- Content Block
+============================================-->
+<section class="content-block default-bg bshadow-top">
+
+  <!-- Container -->
+  <div class="container cont-main">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <% flash.each do |key, value| %>
+            <div class="text-center alert alert-<%= key %> alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+              <%= value %>
+            </div>
+        <% end %>
+      </div>
+    </div>
+    
+    <!-- Form Panel -->
+      <%= render "form" %>
+
+    
+    <!-- /Form Panel -->
+    
+  </div>
+  <!-- /Container -->
+</section>
+<!-- /Content Block

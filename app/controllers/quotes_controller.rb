@@ -15,6 +15,7 @@ class QuotesController < ApplicationController
   # GET /quotes/new
   def new
     @quote = Quote.new
+    @title = "Free Quote | GT Auto Transport"
   end
 
   # GET /quotes/1/edit

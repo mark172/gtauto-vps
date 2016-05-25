@@ -1,6 +1,5 @@
-<%= simple_form_for(@quote, html: {class: "form-group"}) do |f| %>
+<%= simple_form_for(@quote, validate: true, html: {class: "form-group"}) do |f| %>
 
-<div class="">
 <div class ="row">
   <div class="col-md-8 col-md-offset-2">
     <div class="panel panel-primary">
@@ -11,25 +10,25 @@
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon"><i class="fa fa-user"></i></div>
-            <%= f.input :first_name, required: true, label: false, placeholder: "First name (Required)", input_html: {class: "form-control"} %>
+            <%= f.input :first_name, validate: { presence: true, uniqueness: false }, label: false, placeholder: "First name (Required)", input_html: {class: "form-control"} %>
           </div>
         </div>
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon"><i class="fa fa-user"></i></div>
-            <%= f.input :last_name, required: true, label: false, placeholder: "Last name (Required)", input_html: {class: "form-control"} %>
+            <%= f.input :last_name, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Last name (Required)", input_html: {class: "form-control"} %>
           </div>
         </div>
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-            <%= f.input :email, required: true, label: false, placeholder: "Email (Required)", input_html: {class: "form-control"} %>
+            <%= f.input :email, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Email (Required)", input_html: {class: "form-control"} %>
           </div>
         </div>
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-            <%= f.input :phone, required: true, label: false, placeholder: "Phone xxx-xxx-xxxx (Required)", input_html: {class: "form-control"} %>
+            <%= f.input :phone, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Phone xxx-xxx-xxxx (Required)", input_html: {class: "form-control"} %>
           </div>
         </div>
         <%= f.input :pick_up_date, as: :date_picker, readonly: true, label: false, placeholder: "Select a pick-up date (Required)" %>
@@ -37,15 +36,15 @@
     </div>
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h3 class="panel-title text-center">DELIVERY INFORMATION</h3>
+        <h3 class="panel-title text-center">PICK-UP / DELIVERY INFORMATION</h3>
       </div>
       <div class="panel-body">
-        <%= f.input :origin_city, required: true, label: false, placeholder: "Origin city (Required)", input_html: {class: "form-control"} %>
-        <%= f.input :origin_state, required: true, label: false, :collection => ::States.sort.map {|k,v| [v,k]}, prompt: 'Select state (Required)', input_html: {class: "form-control"} %>
-        <%= f.input :origin_zip, required: true, label: false, placeholder: "Origin zip code (Required)", input_html: {class: "form-control"} %>
-        <%= f.input :destination_city, required: true, label: false, placeholder: "Destination city (Required)", input_html: {class: "form-control"} %>
-        <%= f.input :destination_state, required: true, label: false, :collection => ::States.sort.map {|k,v| [v,k]}, prompt: 'Select state (Required)', input_html: {class: "form-control"} %>
-        <%= f.input :destination_zip, required: true, label: false, placeholder: "Destination zip code (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :origin_city, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Origin city (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :origin_state, validate: { presence: true, uniqueness: false }, :collection => ::States.sort.map {|k,v| [v,k]}, prompt: 'Select state (Required)', input_html: {class: "form-control"} %>
+        <%= f.input :origin_zip, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Origin zip code (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :destination_city, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Destination city (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :destination_state, validate: { presence: true, uniqueness: false }, label: false, :collection => ::States.sort.map {|k,v| [v,k]}, prompt: 'Select state (Required)', input_html: {class: "form-control"} %>
+        <%= f.input :destination_zip, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Destination zip code (Required)", input_html: {class: "form-control"} %>
       </div>
     </div>
     <div class="panel panel-primary">
@@ -54,8 +53,8 @@
       </div>
       <div class="panel-body">
         <%= f.input :year, label: false, collection: 2016.downto(1900), prompt: 'Select year (Required)', :input_html => { :class => "form-control"} %>
-        <%= f.input :make, required: true, label: false, placeholder: "Make (Required)", input_html: {class: "form-control"} %>
-        <%= f.input :model, required: true, label: false, placeholder: "Model (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :make, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Make (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :model, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Model (Required)", input_html: {class: "form-control"} %>
         <p><strong>Does this vehicle run?</strong></p><%= f.collection_radio_buttons :is_operable, [[true, 'Yes'] ,[false, 'No']], :first, :last, :checked => true, required: true, :label => "Does it run", input_html: {class: "form-control"} %>
         <%= f.input :description, label: false, placeholder: "Enter details", input_html: {class: "form-control", rows: "10"} %>
       </div>
@@ -66,6 +65,5 @@
         <%= recaptcha_tags %>
       </div>
   </div>
-</div>
 </div>
 <% end %>

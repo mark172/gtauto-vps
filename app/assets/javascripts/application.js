@@ -26,4 +26,6 @@
 //= require theme
 //= require wow.min
 //= require jquery.bxslider-rahisified
+//= require rails.validations
+//= require rails.validations.simple_form
 //= require_tree .

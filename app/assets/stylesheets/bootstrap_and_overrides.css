@@ -117,3 +117,10 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+.titleBar {
+  padding: 0 12px;
+  line-height: 45px;
+  font-size: 16px;
+  color: #FCDA31;
+}

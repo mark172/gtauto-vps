@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
   
   def about
-    @title = "We Ship Cars, Trucks, Boats & Motorcycles |About Us | GT Auto Transport"
+    @title = "About Us | GT Auto Transport"
   end
   
   def download_pdf
@@ -16,11 +16,11 @@ class PagesController < ApplicationController
   end
   
   def terms_and_conditions
-    
+    @title = "Terms and Conditions | GT Auto Transport"
   end
   
-  def faq
-    
+  def faqs
+    @title = "FAQs | GT Auto Transport"
   end
   
 end

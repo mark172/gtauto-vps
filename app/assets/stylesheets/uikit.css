@@ -1427,7 +1427,7 @@ body {
   font-size: 0.85em; }
 
 p, ul, ol, dt, blockquote, figure, pre, table, fieldset {
-  margin: 0 0 0px 0; } /* margin: 0 0 23px 0; */
+  margin: 0 0 23px 0; } /* margin: 0 0 23px 0; */
 
 hr {
   margin: 23px 0;

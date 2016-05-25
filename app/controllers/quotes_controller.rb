@@ -53,7 +53,7 @@ class QuotesController < ApplicationController
         format.html { redirect_to new_quote_path }
         format.json { render :show, status: :created, location: @quote }
       else
-        flash[:danger] = "Unable to send message. Please verify you're a human with the captcha box."
+        flash[:danger] = "Unable to send message. Let us know you're a human by checking the captcha box."
         format.html { render :new}
         format.json { render json: @quote.errors, status: :unprocessable_entity }
       end

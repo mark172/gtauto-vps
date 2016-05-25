@@ -28,10 +28,11 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
 
     respond_to do |format|
-      if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+      if verify_recaptcha(model: @order) && @order.save
+        format.html { redirect_to new_order_path, notice: 'Your order was sucessfully submitted.' }
         format.json { render :show, status: :created, location: @order }
       else
+        flash[:danger] = "Unable to send message. Let us know you're a human by checking the captcha box."
         format.html { render :new }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end

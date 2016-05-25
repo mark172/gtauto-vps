@@ -149,7 +149,11 @@
         <%= f.input :description, label: false, placeholder: "Please use this field to describe any special instructions that might avoid a delay in delivery.", input_html: {class: "form-control", rows: "10"} %>
       </div>
     </div>
-    <%= f.button :submit, "SEND QUOTE REQUEST", class: "tn btn-primary btn-bigger btn-block" %>
+    <%= f.button :submit, "SUBMIT ORDER", class: "tn btn-primary btn-bigger btn-block" %>
+    <br>
+      <div>
+        <%= recaptcha_tags %>
+      </div>
   </div>
 </div>
 <% end %>

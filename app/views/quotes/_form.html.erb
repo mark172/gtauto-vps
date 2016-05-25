@@ -40,7 +40,7 @@
       </div>
       <div class="panel-body">
         <%= f.input :origin_city, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Origin city (Required)", input_html: {class: "form-control"} %>
-        <%= f.input :origin_state, validate: { presence: true, uniqueness: false }, :collection => ::States.sort.map {|k,v| [v,k]}, prompt: 'Select state (Required)', input_html: {class: "form-control"} %>
+        <%= f.input :origin_state, validate: { presence: true, uniqueness: false }, label: false, :collection => ::States.sort.map {|k,v| [v,k]}, prompt: 'Select state (Required)', input_html: {class: "form-control"} %>
         <%= f.input :origin_zip, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Origin zip code (Required)", input_html: {class: "form-control"} %>
         <%= f.input :destination_city, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Destination city (Required)", input_html: {class: "form-control"} %>
         <%= f.input :destination_state, validate: { presence: true, uniqueness: false }, label: false, :collection => ::States.sort.map {|k,v| [v,k]}, prompt: 'Select state (Required)', input_html: {class: "form-control"} %>

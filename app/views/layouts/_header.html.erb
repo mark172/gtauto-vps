@@ -23,13 +23,15 @@
       
         <!-- Navbar Left -->
         <ul class="nav navbar-nav navbar-left">
-          <li><a href="mailto:sales@gtautotransport.com"><i class="icon-left fa fa-comments"></i>Contact sales at 1-208-350-8590 or email sales@gtautostransport.com</a></li>
+          <li><a href="mailto:sales@gtautotransport.com"><i class="icon-left fa fa-comments"></i>Contact us at 1-208-350-8590 or email sales@gtautostransport.com</a></li>
         </ul>
         <!-- /Navbar Left -->
         
         <!-- Navbar Right -->
         <ul class="nav navbar-nav navbar-right">
+          <% if !mobile? %>
           <li class="titleBar" id="google_translate_element"></li>
+          <% end %>
           <li class="titleBar">Se Habla Espanol!</li>
         </ul>
         <!-- /Navbar right -->
@@ -64,6 +66,9 @@
           <%= image_tag ("gtauto/gtat_main.png"), class: "visible-xs" %> <!-- Mobile Logo -->
         </a>
       </div>
+      <% if mobile? %>
+      <div class="visible-xs translation" id="google_translate_element"></div>
+      <% end %>
       <!-- /Header-->
       
       <!-- Nav Buttons -->

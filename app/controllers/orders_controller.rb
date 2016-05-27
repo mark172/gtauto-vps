@@ -29,7 +29,44 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if verify_recaptcha(model: @order) && @order.save
-        format.html { redirect_to new_order_path, notice: 'Your order was sucessfully submitted.' }
+        
+        todays_date = params[:order][:todays_date]
+        date_first_available = params[:order][:date_first_available]
+        quote_number = params[:order][:quote_number]
+        amount_quoted = params[:order][:amount_quoted]
+        phone = params[:order][:phone]
+        email = params[:order][:email]
+        origin_first_name = params[:order][:origin_first_name]
+        origin_last_name = params[:order][:origin_last_name]
+        origin_city = params[:order][:origin_city]
+        origin_state = params[:order][:origin_state]
+        origin_zip = params[:order][:origin_zip]
+        origin_home_phone = params[:order][:origin_home_phone]
+        origin_work_phone = params[:order][:origin_work_phone]
+        origin_cell_phone = params[:order][:origin_cell_phone]
+        destination_first_name = params[:order][:destination_first_name]
+        destination_last_name = params[:order][:destination_last_name]
+        destination_city = params[:order][:destination_city]
+        destination_state = params[:order][:destination_state]
+        destination_zip = params[:order][:destination_zip]
+        destination_home_phone = params[:order][:destination_home_phone]
+        destination_work_phone = params[:order][:destination_work_phone]
+        destination_cell_phone = params[:order][:destination_cell_phone]
+        year = params[:order][:year]
+        make = params[:order][:make]
+        model = params[:order][:model]
+        license_plate = params[:order][:license_plate]
+        vin = params[:order][:vin]
+        color = params[:order][:color]
+        is_operable = params[:order][:is_operable]
+        is_oversied = params[:order][:is_oversied]
+        payment = params[:order][:payment]
+        description = params[:order][:description]
+        
+        OrderMailer.order_email(todays_date, date_first_available, quote_number, amount_quoted, phone, email, origin_first_name, origin_last_name, origin_city, origin_state, origin_zip, origin_home_phone, origin_work_phone, origin_cell_phone, destination_first_name, destination_last_name, destination_city, destination_state, destination_zip, destination_home_phone, destination_work_phone, destination_cell_phone, year, make, model, license_plate, vin, color, is_operable, is_oversied, payment, description).deliver_now
+        
+        flash[:success] = "Your order was successfully sent."
+        format.html { redirect_to new_order_path }
         format.json { render :show, status: :created, location: @order }
       else
         flash[:danger] = "Unable to send message. Let us know you're a human by checking the captcha box."

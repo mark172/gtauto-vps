@@ -40,17 +40,17 @@
     <p>License Plate: <strong><%= "#{@license_plate}" %></strong></p>
     <p>VIN#: <strong><%= "#{@vin}" %></strong></p>
     <p>Color: <strong><%= "#{@color}" %></strong></p>
-    <% if @is_operable == true %>
+    <% if @is_operable == "true" %>
       <p>Is car operable?: <strong>Yes</strong></p>
     <% else %>
       <p>Is car operable?: <strong>No</strong></p>
     <% end %>
-    <% if @is_oversied == true %>
+    <% if @is_oversied == "true" %>
       <p>Oversized?: <strong>Yes</strong></p>
     <% else %>
       <p>Oversized?: <strong>No</strong></p>
     <% end %>
-    <p>Payment Type: <%= "#{@payment}" %></p>
+    <p>Payment Type: <strong><%= "#{@payment}" %></strong></p>
     <p>Extra information: <%= "#{@description}" %></p>
   </body>
 </html>

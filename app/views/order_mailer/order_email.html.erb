@@ -8,8 +8,8 @@
     <h3>Contact Information</h3>
     <p>Today's Date: <strong><%= "#{Date.parse(@todays_date).strftime("%B %e, %Y")}" %></strong></p>
     <p>Date first available: <strong><%= "#{Date.parse(@date_first_available).strftime("%B %e, %Y")}" %></strong></p>
-    <p>Email: <strong><%= "#{@quote_number}" %></strong></p>
-    <p>Email: <strong><%= "#{@amount_quoted}" %></strong></p>
+    <p>Quote Number: <strong><%= "#{@quote_number}" %></strong></p>
+    <p>Amount Quoted: <strong>$<%= "#{@amount_quoted}" %></strong></p>
     <p>Email: <strong><%= "#{@email}" %></strong></p>
     <p>Phone: <strong><%= "#{@phone}" %></strong></p>
     <br>
@@ -41,14 +41,14 @@
     <p>VIN#: <strong><%= "#{@vin}" %></strong></p>
     <p>Color: <strong><%= "#{@color}" %></strong></p>
     <% if @is_operable == "true" %>
-      <p>Is car operable?: <strong>Yes</strong></p>
+      <p>Is car operable? <strong>Yes</strong></p>
     <% else %>
-      <p>Is car operable?: <strong>No</strong></p>
+      <p>Is car operable? <strong>No</strong></p>
     <% end %>
     <% if @is_oversied == "true" %>
-      <p>Oversized?: <strong>Yes</strong></p>
+      <p>Oversized? <strong>Yes</strong></p>
     <% else %>
-      <p>Oversized?: <strong>No</strong></p>
+      <p>Oversized? <strong>No</strong></p>
     <% end %>
     <p>Payment Type: <strong><%= "#{@payment}" %></strong></p>
     <p>Extra information: <%= "#{@description}" %></p>

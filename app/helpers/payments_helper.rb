@@ -1,7 +1,7 @@
 module PaymentsHelper
 ::Payments = {
     VISA: "Visa",
-    MC: "Master Card",
+    MASTERCARD: "Master Card",
     AMEX: "American Express",
     DISCOVER: "Discover",
     PAYPAL: "PayPal",

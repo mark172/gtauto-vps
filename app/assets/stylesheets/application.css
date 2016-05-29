@@ -22,6 +22,7 @@
  *= require hl-default
  *= require prettyPhoto
  *= require bootstrap_and_overrides
+ *= require jasny-bootstrap.min
  */
 
 input[type="radio"], input[type="checkbox"] {

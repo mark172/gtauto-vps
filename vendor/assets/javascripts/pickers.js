@@ -3,7 +3,7 @@ $(document).on('ready page:change', function() {
     // put here your custom picker options, that should be applied for all pickers
     minDate : 'now',
     ignoreReadonly: true
-  });
+});
 
   $('.datetimerange').each(function(){
     var $this = $(this)

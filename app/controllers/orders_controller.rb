@@ -65,11 +65,11 @@ class OrdersController < ApplicationController
         
         OrderMailer.order_email(todays_date, date_first_available, quote_number, amount_quoted, phone, email, origin_first_name, origin_last_name, origin_city, origin_state, origin_zip, origin_home_phone, origin_work_phone, origin_cell_phone, destination_first_name, destination_last_name, destination_city, destination_state, destination_zip, destination_home_phone, destination_work_phone, destination_cell_phone, year, make, model, license_plate, vin, color, is_operable, is_oversied, payment, description).deliver_now
         
-        flash[:success] = "Your order was successfully sent."
+        flash[:success] = "Your order request was successfully sent."
         format.html { redirect_to new_order_path }
         format.json { render :show, status: :created, location: @order }
       else
-        flash[:danger] = "Unable to send message. Let us know you're a human by checking the captcha box."
+        flash[:danger] = "Unable to send order request. Please check below for errors and let us know you're a human by checking the captcha box."
         format.html { render :new }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end

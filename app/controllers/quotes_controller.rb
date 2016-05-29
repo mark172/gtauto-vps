@@ -1,5 +1,5 @@
 class QuotesController < ApplicationController
-  before_action :set_quote, only: [:show, :edit, :update, :destroy]
+  #before_action :set_quote, only: [:show, :edit, :update, :destroy]
 
   # GET /quotes
   # GET /quotes.json
@@ -10,6 +10,7 @@ class QuotesController < ApplicationController
   # GET /quotes/1
   # GET /quotes/1.json
   def show
+    redirect_to root_path
   end
 
   # GET /quotes/new
@@ -20,6 +21,7 @@ class QuotesController < ApplicationController
 
   # GET /quotes/1/edit
   def edit
+    redirect_to root_path
   end
 
   # POST /quotes
@@ -53,7 +55,7 @@ class QuotesController < ApplicationController
         format.html { redirect_to new_quote_path }
         format.json { render :show, status: :created, location: @quote }
       else
-        flash[:danger] = "Unable to send message. Let us know you're a human by checking the captcha box."
+        flash[:danger] = "Unable to send quote request. Please check below for errors and let us know you're a human by checking the captcha box."
         format.html { render :new}
         format.json { render json: @quote.errors, status: :unprocessable_entity }
       end
@@ -63,25 +65,27 @@ class QuotesController < ApplicationController
   # PATCH/PUT /quotes/1
   # PATCH/PUT /quotes/1.json
   def update
-    respond_to do |format|
-      if @quote.update(quote_params)
-        format.html { redirect_to @quote, notice: 'Quote was successfully updated.' }
-        format.json { render :show, status: :ok, location: @quote }
-      else
-        format.html { render :edit }
-        format.json { render json: @quote.errors, status: :unprocessable_entity }
-      end
-    end
+    redirect_to root_path
+    # respond_to do |format|
+    #   if @quote.update(quote_params)
+    #     format.html { redirect_to @quote, notice: 'Quote was successfully updated.' }
+    #     format.json { render :show, status: :ok, location: @quote }
+    #   else
+    #     format.html { render :edit }
+    #     format.json { render json: @quote.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # DELETE /quotes/1
   # DELETE /quotes/1.json
   def destroy
-    @quote.destroy
-    respond_to do |format|
-      format.html { redirect_to quotes_url, notice: 'Quote was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to root_path
+    # @quote.destroy
+    # respond_to do |format|
+    #   format.html { redirect_to quotes_url, notice: 'Quote was successfully destroyed.' }
+    #   format.json { head :no_content }
+    # end
   end
 
   private

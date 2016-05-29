@@ -36,6 +36,7 @@ gem 'themify-icons-rails'
 
 gem "recaptcha", require: "recaptcha/rails"
 
+gem 'jasny-bootstrap-rails'
 
 
 # Use ActiveModel has_secure_password

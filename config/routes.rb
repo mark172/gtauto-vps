@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/pages/download_pdf" => 'pages#download_pdf'
   get '/terms_and_conditions' => 'pages#terms_and_conditions'
   get '/faqs' => 'pages#faqs'
+  get '/contacts' => 'pages#contacts'
 
   resources :orders
   resources :quotes

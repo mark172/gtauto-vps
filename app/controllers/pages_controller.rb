@@ -23,4 +23,7 @@ class PagesController < ApplicationController
     @title = "FAQs | GT Auto Transport"
   end
   
+  def contacts
+  end
+  
 end

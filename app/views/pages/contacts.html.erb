@@ -6,8 +6,8 @@
 <div class="container cont-main">
   <!-- Section Title -->
   <div class="section-title no-margin-b">
-    <h2>contact</h2>
-    <p class="width-50pc hidden-xs">Our sales office hours are 7:30-6 PST Monday-Friday, 
+    <h2>get in touch</h2>
+    <p class="width-50pc hidden-xs">Our sales office hours are 7:30-6 PST Monday-Friday and 
     our status dept is open 1-6 PST Monday-Friday. We are available for vehicle 
     shipments only. Unfortunately we do not ship household goods but we can refer you.</p>
   </div>
@@ -43,26 +43,17 @@
         <h5 class="widget-title">Our location</h5>
         
         <!-- fader -->
-        <div class="fader mgb-20">
-          <img src="images/map.jpg" alt="">
-          <!-- hidden -->
-          <div class="fader-hidden pcolor-bg white">
-            <!-- stuff to be revealed here ! -->
-            <div class="vcenter align-center">
-              <div class="vcenter-this">
-                <a href="#" data-toggle="modal" data-target="#map-modal"><span class="white">VIEW MAP</span></a>
-              </div>
-            </div>
-            <!-- /stuff to be revealed here ! -->
-          </div>
-          <!-- /hidden-->
+        <div class="mgb-20">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.482448782982!2d-116.66259168455002!3d43.638129861423124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54ae495a2fb929cb%3A0x1d662094aeb3dca!2sGT+Auto+Transport!5e0!3m2!1sen!2sus!4v1464752068697" width="700" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <!-- /fader -->
         
         <!-- vlinks -->
         <ul class="vlinks vlinks-iconed vlinks-ruled-dots">
-          <li><i class="icon fa fa-home"></i>GT Auto Transport, Inc.<br/>19418 Hodson Creek Ave<br/>Caldwell, ID 83605</li>
-          <li class="centered"><i class="icon fa fa-laptop"></i>sales@gtautotransport.com<br/> info@gtautotransport.com<br/>status@gtautotransport.com</li>
+          <li><i class="icon fa fa-home"></i>GT Auto Transport, Inc.<br/>3102 Village Green St<br/>Caldwell, ID 83605</li>
+          <li class="centered"><i class="icon fa fa-laptop"></i><%= mail_to "sales@gtautotransport.com", "sales@gtautotransport.com", subject: "Sales inquiry" %>
+          <br/> <%= mail_to "info@gtautotransport.com", "info@gtautotransport.com", subject: "Information request" %>
+          <br/><%= mail_to "status@gtautotransport.com", "status@gtautotransport.com", subject: "Status inquiry" %></li>
           <li><i class="icon fa fa-user"></i>208-350-8590<br/> MC# 561468</li>
         </ul>
         <!-- /vlinks -->

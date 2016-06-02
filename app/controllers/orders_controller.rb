@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  #before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
   # GET /orders.json
@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
     @order.todays_date = Date.current
+    @title = "Place an Order | GT Auto Transport"
   end
 
   # GET /orders/1/edit

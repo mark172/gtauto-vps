@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :trackings
   root 'pages#index'
   get '/about' => 'pages#about' 
   get "/pages/download_pdf" => 'pages#download_pdf'

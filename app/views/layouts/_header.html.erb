@@ -89,6 +89,7 @@
           <ul class="dropdown-menu">
             <li class="<%= 'active' if current_page?(new_quote_path) %>"><%= link_to "free quote", new_quote_path %></li>
             <li class="<%= 'active' if current_page?(new_order_path) %>"><%= link_to "place order", new_order_path %></li>
+            <li class="<%= 'active' if current_page?(new_tracking_path) %>"><%= link_to "track order", new_tracking_path %></li>
           </ul>
         </li>
           <li class="<%= 'active' if current_page?(faqs_path) %>"><%= link_to "faqs", faqs_path %></li>

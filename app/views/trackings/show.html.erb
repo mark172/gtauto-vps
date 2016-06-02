@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @tracking.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @tracking.last_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @tracking.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @tracking.email %>
+</p>
+
+<p>
+  <strong>Order number:</strong>
+  <%= @tracking.order_number %>
+</p>
+
+<p>
+  <strong>Pick up date:</strong>
+  <%= @tracking.pick_up_date %>
+</p>
+
+<p>
+  <strong>Origin city:</strong>
+  <%= @tracking.origin_city %>
+</p>
+
+<p>
+  <strong>Origin state:</strong>
+  <%= @tracking.origin_state %>
+</p>
+
+<p>
+  <strong>Origin zip:</strong>
+  <%= @tracking.origin_zip %>
+</p>
+
+<p>
+  <strong>Destination city:</strong>
+  <%= @tracking.destination_city %>
+</p>
+
+<p>
+  <strong>Destination state:</strong>
+  <%= @tracking.destination_state %>
+</p>
+
+<p>
+  <strong>Destination zip:</strong>
+  <%= @tracking.destination_zip %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @tracking.year %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @tracking.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @tracking.model %>
+</p>
+
+<%= link_to 'Edit', edit_tracking_path(@tracking) %> |
+<%= link_to 'Back', trackings_path %>

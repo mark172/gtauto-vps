@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Trackings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Order number</th>
+      <th>Pick up date</th>
+      <th>Origin city</th>
+      <th>Origin state</th>
+      <th>Origin zip</th>
+      <th>Destination city</th>
+      <th>Destination state</th>
+      <th>Destination zip</th>
+      <th>Year</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trackings.each do |tracking| %>
+      <tr>
+        <td><%= tracking.first_name %></td>
+        <td><%= tracking.last_name %></td>
+        <td><%= tracking.phone %></td>
+        <td><%= tracking.email %></td>
+        <td><%= tracking.order_number %></td>
+        <td><%= tracking.pick_up_date %></td>
+        <td><%= tracking.origin_city %></td>
+        <td><%= tracking.origin_state %></td>
+        <td><%= tracking.origin_zip %></td>
+        <td><%= tracking.destination_city %></td>
+        <td><%= tracking.destination_state %></td>
+        <td><%= tracking.destination_zip %></td>
+        <td><%= tracking.year %></td>
+        <td><%= tracking.make %></td>
+        <td><%= tracking.model %></td>
+        <td><%= link_to 'Show', tracking %></td>
+        <td><%= link_to 'Edit', edit_tracking_path(tracking) %></td>
+        <td><%= link_to 'Destroy', tracking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tracking', new_tracking_path %>

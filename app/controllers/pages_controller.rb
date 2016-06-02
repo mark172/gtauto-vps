@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @title = "We Ship Cars, Trucks, Boats & Motorcycles | GT Auto Transport"
+    @title = "Nationwide Door-to-Door Auto Transport Service | GT Auto Transport"
   end
   
   def about
@@ -24,6 +24,7 @@ class PagesController < ApplicationController
   end
   
   def contacts
+    @title = "Contact Us | GT Auto Transport"
   end
   
 end

@@ -1,26 +1,27 @@
 class TrackingsController < ApplicationController
-  before_action :set_tracking, only: [:show, :edit, :update, :destroy]
+  #before_action :set_tracking, only: [:show, :edit, :update, :destroy]
 
   # GET /trackings
   # GET /trackings.json
   def index
-    @trackings = Tracking.all
-    @title = "Tracking Information | GT Auto Transport"
+    redirect_to root_path
   end
 
   # GET /trackings/1
   # GET /trackings/1.json
   def show
+    redirect_to root_path
   end
 
   # GET /trackings/new
   def new
     @tracking = Tracking.new
-     @title = "Tracking Information | GT Auto Transport"
+    @title = "Tracking Information | GT Auto Transport"
   end
 
   # GET /trackings/1/edit
   def edit
+    redirect_to root_path
   end
 
   # POST /trackings

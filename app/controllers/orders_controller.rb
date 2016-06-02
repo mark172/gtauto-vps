@@ -4,12 +4,13 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    redirect_to root_path
   end
 
   # GET /orders/1
   # GET /orders/1.json
   def show
+    redirect_to root_path
   end
 
   # GET /orders/new
@@ -21,6 +22,7 @@ class OrdersController < ApplicationController
 
   # GET /orders/1/edit
   def edit
+    redirect_to root_path
   end
 
   # POST /orders

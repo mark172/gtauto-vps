@@ -32,10 +32,11 @@ class TrackingsController < ApplicationController
     respond_to do |format|
       if verify_recaptcha(model: @tracking) && @tracking.save
         
-        
-        format.html { redirect_to @tracking, notice: 'Tracking was successfully created.' }
+        flash[:success] = "Your tracking request was successfully sent."
+        format.html { redirect_to new_tracking_path }
         format.json { render :show, status: :created, location: @tracking }
       else
+        flash[:danger] = "Unable to send tracking request. Please check below for errors and let us know you're a human by checking the captcha box."
         format.html { render :new }
         format.json { render json: @tracking.errors, status: :unprocessable_entity }
       end

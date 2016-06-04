@@ -16,12 +16,12 @@
 /* COLOR CLASSES
 -------------------------------------------- */
 .bcolor {
-  color: #063796; }
+  color: #0033ff; } /* my change */
 
 .bcolor-bg {
-  background-color: #063796; }
+  background-color: #0033ff; } /* my change */
   .bcolor-bg.bgcolor-fixed {
-    background-color: #063796 !important; }
+    background-color: #0033ff !important; } /* my change */
 
 .pcolor {
   color: #185cd5; }
@@ -796,7 +796,7 @@ pre {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1%, rgba(0, 0, 0, 0.1) 100%); }
 
 .btn-primary {
-  background-color: #185cd5;
+  background-color: #0033ff; /* my change */
   color: #fff; }
   .btn-primary:hover {
     background: #1a6f70; }
@@ -818,7 +818,7 @@ pre {
     color: #fff; }
 
 .btn-primary {
-  background-color: #185cd5;
+  background-color: #0033ff; /* my change */
   color: #fff; }
   .btn-primary:hover {
     background-color: #063796;
@@ -1478,7 +1478,7 @@ h6 {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-family: "Roboto Condensed";
-  color: #063796; }
+  color: #0033ff; } /* my change */
 
 .lts-sm {
   letter-spacing: 2px; }
@@ -1825,7 +1825,7 @@ input[type="checkbox"] {
     .hnav .navbar-nav > li > a .toggler {
       margin-left: 10px; }
   .hnav .navbar-nav > li:hover > a, .hnav .navbar-nav > li.active > a, .hnav .navbar-nav > li.open > a, .hnav .navbar-nav > li > a:focus, .hnav .navbar-nav > li.alt-state > a {
-    color: #185cd5;
+    color: #0033ff; /* my change */
     background: none; }
   .hnav .navbar-nav > li.dropdown.mega {
     position: static; }
@@ -2358,7 +2358,7 @@ body {
   .section-title h2 {
     font: 400 1.8em/1em "Roboto Condensed";
     position: relative;
-    color: #063796;
+    color: #0033ff; /* my change */
     display: block;
     padding: 0 0 1em 0;
     margin: 0 0 0.8em 0;
@@ -2464,7 +2464,7 @@ section-title.invert-colors, .dark-bg .section-title {
   color: rgba(255, 255, 255, 0.5);
   position: relative;
   z-index: 200;
-  background: #063796; }
+  background: #0033ff; } /* my change */
   .footer-block .container {
     position: relative;
     z-index: 200; }
@@ -2997,7 +2997,7 @@ section-title.invert-colors, .dark-bg .section-title {
     top: 0;
     width: 35px; }
   .vlinks-iconed > li .icon {
-    background: #185cd5;
+    background: #0033ff; /* my change */
     color: #fff;
     line-height: 35px;
     height: 35px;
@@ -4232,14 +4232,14 @@ ul.tags {
   font: 300 12px/50px "Roboto Condensed";
   letter-spacing: 0.1em;
   margin: 0;
-  border-left: 1px solid #d4d7d9;
+  border-left: 1px solid #0033ff; /* my change */
   text-align: left;
-  color: #063796; }
+  color: #0033ff; }
   .tab-pager a .icon {
     margin-right: 15px;
     opacity: 0.4; }
   .tab-pager a.active {
-    border: 1px solid #d4d7d9;
+    border: 1px solid #0033ff; /* my change */
     border-left: none;
     color: #185cd5; }
     .tab-pager a.active .icon {
@@ -4249,7 +4249,7 @@ ul.tags {
 .tab-pager:after, .tab-pager:before {
   content: "";
   display: block;
-  border-left: 1px solid #d4d7d9;
+  border-left: 1px solid #0033ff;
   height: 30px; }
 
 .dark-bg .tab-pager a {

@@ -32,6 +32,24 @@ class TrackingsController < ApplicationController
     respond_to do |format|
       if verify_recaptcha(model: @tracking) && @tracking.save
         
+        first_name = params[:tracking][:first_name]
+        last_name = params[:tracking][:last_name]
+        phone = params[:tracking][:phone]
+        email = params[:tracking][:email]
+        order_number = params[:tracking][:order_number]
+        pick_up_date = params[:tracking][:pick_up_date]
+        origin_city = params[:tracking][:origin_city]
+        origin_state = params[:tracking][:origin_state]
+        origin_zip = params[:tracking][:origin_zip]
+        destination_city = params[:tracking][:destination_city]
+        destination_state = params[:tracking][:destination_state]
+        destination_zip = params[:tracking][:destination_zip]
+        year = params[:tracking][:year]
+        make = params[:tracking][:make]
+        model = params[:tracking][:model]
+        
+        TrackingMailer.tracking_email(first_name, last_name, email, order_number, phone, pick_up_date, origin_city, origin_state, origin_zip, destination_city, destination_state, destination_zip, year, make, model).deliver_now
+        
         flash[:success] = "Your tracking request was successfully sent."
         format.html { redirect_to new_tracking_path }
         format.json { render :show, status: :created, location: @tracking }

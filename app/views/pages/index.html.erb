@@ -65,7 +65,7 @@
                     <div class="text">
                       <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">order status</h1>
                       <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get the status of your order we ask that you either click the button and fill out a tracking form, e-mail status@gtautotransport.com directly or call <strong>1-208-350-8590</strong>.</p>
-                      <a class="btn btn-primary no-border btn-bigger bx-layer" data-anim="slideInUp" data-dur="1000" data-delay="600">track shipment</a>
+                      <%= link_to "track shipment", new_tracking_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
                     </div>
                     <!-- /Text -->
                     <%= image_tag ("gtauto/boat.png"), class: "img-main" %>
@@ -87,7 +87,7 @@
                 <div class="vcenter-this">
                   <!-- Pager -->
                   <div id="intro-pager" class="tab-pager">
-                    <a data-slide-index="0" href="#"><i class="icon fa  fa-arrow-right"></i><span>About Us</span></a>
+                    <a data-slide-index="0" href="#"><i class="icon fa fa-arrow-right"></i><span>About Us</span></a>
                     <a data-slide-index="1" href="#"><i class="icon fa fa-arrow-right"></i><span>Quote Form</span></a>
                     <a data-slide-index="2" href="#"><i class="icon fa fa-arrow-right"></i><span>order form</span></a>
                     <a data-slide-index="3" href="#"><i class="icon fa fa-arrow-right"></i><span>tracking</span></a>
@@ -130,90 +130,70 @@
             or contact us to request a free quote today from local auto transportation companies.</p>
           </div>
           <!-- /Section Title -->
+          <br />
+          <hr>
+          <br />
+        
+          <!-- Section Title -->
+          <div class="section-title">
+            <h2>customer testmonials</h2>
+          </div>
+          <!-- Section Title -->
           
           <!-- Row -->
           <div class="row">
-          
-            <!-- Col -->
-            <div class="col-sm-6 col-md-4">
-              <!-- hfeat -->
-              <div class="service hfeat hfeat-md">
-                <i class="icon ti-desktop" ></i>
-                <a class="title">First Feature</a>
-                <p class="text">Sed ut perspiciatis unde omnis iste natus sit voluptatem </p>
-                <a class="more-link">read more<i class="icon-right ti ti-arrow-right"></i></a>
+            <div class="col-md-6 col-sm-6">
+              <div class="hquote">
+                <blockquote>
+                  <p><%= image_tag ("gtauto/review_logo.jpg"), class: "avatar" %><strong>Third time and still charmed - </strong>I was introduced to Amy at GT Auto Transport when I purchased a classic Mustang that needed to be transported. This is now the third car in 4 weeks they've moved for me, and I'm very happy all around!</p>
+                  <small class="author-bottom"><%= link_to "Chach DalSanto", "http://www.transportreviews.com/Company/GT-Auto-Transport-LLC/Reviews/286601/", :target => "_blank" %></small>
+                </blockquote>
               </div>
-              <!-- /hfeat -->
             </div>
-            <!-- /Col -->
-            
-            <!-- Col -->
-            <div class="col-sm-6 col-md-4">
-              <!-- hfeat -->
-              <div class="service hfeat hfeat-md">
-                <i class="icon ti-camera"></i>
-                <a class="title">second feature</a>
-                <p class="text">Sed ut perspiciatis unde omnis iste natus sit voluptatem </p>
-                <a class="more-link">read more<i class="icon-right ti ti-arrow-right"></i></a>
+            <div class="col-md-6 col-sm-6">
+              <div class="hquote hquote-right">
+                <blockquote>
+                  <p><%= image_tag ("gtauto/review_logo.jpg"), class: "avatar" %><strong>Great service - </strong>Everything you want in car transport. Friendly, courteous, on time, clean, etc. The driver kept me informed on his pickup schedule and followed all instructions for delivery. He contacted the receiving person and delivered it as promised.</p>
+                  <small class="author-bottom"><%= link_to "Rob", "http://www.transportreviews.com/Company/GT-Auto-Transport-LLC/Reviews/282374/", :target => "_blank" %></small>
+                </blockquote>
               </div>
-              <!-- /hfeat -->
             </div>
-            <!-- /Col -->
-            
-            <!-- Col -->
-            <div class="col-sm-6 col-md-4">
-              <!-- hfeat -->
-              <div class="service hfeat hfeat-md">
-                <i class="icon ti-printer"></i>
-                <a class="title">third feature</a>
-                <p class="text">Sed ut perspiciatis unde omnis iste natus sit voluptatem </p>
-                <a class="more-link">read more<i class="icon-right ti ti-arrow-right"></i></a>
+            <div class="col-md-6 col-sm-6">
+              <div class="hquote">
+                <blockquote>
+                  <p><%= image_tag ("gtauto/review_logo.jpg"), class: "avatar" %><strong>THANK YOU GT AUTO TRANSPORT!!!! - </strong>Amy with GT Auto Transport was extremely helpful and prompt with getting my vehicle transported from Portland, OR to Houston, TX. I would HIGHLY recommend them to anyone in need of transporting. Thanks again Amy!!!!</p>
+                  <small class="author-bottom"><%= link_to "Tony B", "http://www.transportreviews.com/Company/GT-Auto-Transport-LLC/Reviews/281625/", :target => "_blank" %></small>
+                </blockquote>
               </div>
-              <!-- /hfeat -->
             </div>
-            <!-- /Col -->
-          
-            <!-- Col -->
-            <div class="col-sm-6 col-md-4">
-              <!-- hfeat -->
-              <div class="service hfeat hfeat-md">
-                <i class="icon ti-comments"></i>
-                <a class="title">fourth feature</a>
-                <p class="text">Sed ut perspiciatis unde omnis iste natus sit voluptatem </p>
-                <a class="more-link">read more<i class="icon-right ti ti-arrow-right"></i></a>
+            <div class="col-md-6 col-sm-6">
+              <div class="hquote hquote-right">
+                <blockquote>
+                  <p><%= image_tag ("gtauto/review_logo.jpg"), class: "avatar" %><strong>BEST SERVICE! - </strong>Amy is GREAT to deal with, very knowledgeable, and keeps constant contact. I highly recommend GT TRANSPORT!!!</p>
+                  <small class="author-bottom"><%= link_to "Caleb", "http://www.transportreviews.com/Company/GT-Auto-Transport-LLC/Reviews/276132/", :target => "_blank" %></small>
+                </blockquote>
               </div>
-              <!-- /hfeat -->
             </div>
-            <!-- /Col -->
-            
-            <!-- Col -->
-            <div class="col-sm-6 col-md-4">
-              <!-- hfeat -->
-              <div class="service hfeat hfeat-md">
-                <i class="icon ti-cup"></i>
-                <a class="title">fifth feature</a>
-                <p class="text">Sed ut perspiciatis unde omnis iste natus sit voluptatem </p>
-                <a class="more-link">read more<i class="icon-right ti ti-arrow-right"></i></a>
-              </div>
-              <!-- /hfeat -->
-            </div>
-            <!-- /Col -->
-            
-            <!-- Col -->
-            <div class="col-sm-6 col-md-4">
-              <!-- hfeat -->
-              <div class="service hfeat hfeat-md">
-                <i class="icon ti-truck"></i>
-                <a class="title">sixth feature</a>
-                <p class="text">Sed ut perspiciatis unde omnis iste natus sit voluptatem </p>
-                <a class="more-link">read more<i class="icon-right ti ti-arrow-right"></i></a>
-              </div>
-              <!-- /hfeat -->
-            </div>
-            <!-- /Col -->
-          
           </div>
           <!-- /Row -->
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="hquote">
+                <blockquote>
+                  <p><%= image_tag ("gtauto/review_logo.jpg"), class: "avatar" %><strong>Excellent, Honest, Affordable - </strong>After regretfully filling out a vehicle shipping quote online, which resulted in over 50 emails from various companies, most of which were out of Florida, I found Derek and Amy. We were surprising my mother with a new car for Christmas... <%= link_to "read more", "http://www.transportreviews.com/Company/GT-Auto-Transport-LLC/Reviews/275925/", :target => "_blank" %> </p>
+                  <small class="author-bottom"><%= link_to "Erik Cloud", "http://www.transportreviews.com/Company/GT-Auto-Transport-LLC/Reviews/275925/", :target => "_blank" %></small>
+                </blockquote>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="hquote hquote-right">
+                <blockquote>
+                  <p><%= image_tag ("gtauto/review_logo.jpg"), class: "avatar" %><strong>Great Job-Prompt And Reliable - </strong>GT Auto Transport has been great. We are in Southern California and often need to dealer trade for cars in Northern California, Seattle and Oregon… Even when we need cars on the East Coast, and or across the United States, Amy... <%= link_to "read more", "http://www.transportreviews.com/Company/GT-Auto-Transport-LLC/Reviews/274578/", :target => "_blank" %> </p>
+                  <small class="author-bottom"><%= link_to "Johnny M", "http://www.transportreviews.com/Company/GT-Auto-Transport-LLC/Reviews/274578/", :target => "_blank" %></small>
+                </blockquote>
+              </div>
+            </div>
+          </div>
         
         </div>
         <!-- /Container -->

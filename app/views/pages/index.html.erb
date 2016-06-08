@@ -24,12 +24,12 @@
                   <div class="slide">
                     <!-- Text -->
                     <div class="text">
-                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">We ship cars, trucks, boats &amp motorcycles</h1>
-                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">In every aspect of our service, we strive to deliver the highest level of service to our customers!</p>
-                      <%= link_to "learn more", about_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
+                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">If it has wheels, we will ship it!</h1>
+                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get started with your vehicle transport, please fill out the quote form. If at any time you have questions or run into trouble please call our Sales office, toll free, at <strong>208-350-8590</strong>.</p>
+                      <%= link_to "get a free quote", new_quote_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
                     </div>
                     <!-- /Text -->
-                    <%= image_tag ("gtauto/carYellowNew.png"), class: "img-main" %>
+                    <%= image_tag ("gtauto/bugatti_main.png"), class: "img-main" %>
                   </div>
                   <!-- /Slide -->
                   
@@ -37,9 +37,9 @@
                   <div class="slide">
                     <!-- Text -->
                     <div class="text">
-                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">quick quote form</h1>
-                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get started with your vehicle transport, please fill out the quote form. If at any time you have questions or run into trouble please call our Sales office, toll free, at <strong>1-208-350-8590</strong>.</p>
-                      <%= link_to "get a free quote", new_quote_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
+                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">start an order</h1>
+                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get started with your vehicle transport, please click the button below and fill out the form. If at any time you have any questions or run into any trouble please call our Sales office, toll free, at <strong>1-208-350-8590</strong>.</p>
+                      <%= link_to "start an order", new_order_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
                     </div>
                     <!-- /Text -->
                     <%= image_tag ("gtauto/f150.png"), class: "img-main" %>
@@ -87,8 +87,8 @@
                 <div class="vcenter-this">
                   <!-- Pager -->
                   <div id="intro-pager" class="tab-pager">
-                    <a data-slide-index="0" href="#"><i class="icon fa fa-arrow-right"></i><span>About Us</span></a>
-                    <a data-slide-index="1" href="#"><i class="icon fa fa-arrow-right"></i><span>Quote Form</span></a>
+                    <a data-slide-index="0" href="#"><i class="icon fa fa-arrow-right"></i><span>Free Quote</span></a>
+                    <a data-slide-index="1" href="#"><i class="icon fa fa-arrow-right"></i><span>place an order</span></a>
                     <a data-slide-index="2" href="#"><i class="icon fa fa-arrow-right"></i><span>order form</span></a>
                     <a data-slide-index="3" href="#"><i class="icon fa fa-arrow-right"></i><span>tracking</span></a>
                   </div>
@@ -118,16 +118,15 @@
           <!-- Section Title -->
           <div class="section-title">
             <h2>Door-to-Door Service | Open and Enclosed Transport | Competitive Rates</h2>
-            <p><strong>GT Auto Transport</strong>, Inc offers the highest standard of carriers that are honest, 
-            reliable, licensed, and insured! Whether you’re a dealer or individual we work to 
-            provide you with the most satisfying auto transportation services. No matter if, it’s 
-            across the state or coast to coast. With GT Auto Transport, Inc you will find a level of
-            customer service that exceeds the industry standards. At GT Auto Transport, Inc we 
-            understand that price is a major factor, here we will work to get you the lowest price
-            with best service. We provide door-to-door service and many discounts such as military,
-            senior citizens, multi-car, and return customer. GT Auto Transport, Inc can help arrange 
-            your car shipping with safe and reliable auto shipper service! Use the link (<%= link_to "Quick Quote", new_quote_path %>)
-            or contact us to request a free quote today from local auto transportation companies.</p>
+            <p>WHETHER IT'S ACROSS THE STATE OR COAST TO COAST; GT AUTO TRANSPORT, LLC WILL DELIVER A HIGHER CALIBER OF 
+                CUSTOMER SERVICE THAT EXCEEDS OUR COMPETITOR'S STANDARDS. WE ARE A CHRISTIAN FAITH BASED AND FAMILY OWNED BUSINESS. WE 
+                OPERATE IN EVERY STATE (INCLUDING ALASKA & HAWAII) EXCEPT WASHINGTON, D.C. WE HAVE BEEN IN BUSINESS FOR OVER 10 YEARS, SO WE 
+                ARE FIRMLY PLANTED IN THIS INDUSTRY! MANY TRANSPORT COMPANIES HAVE AUTOMATED PHONE LINES TO FIELD THEIR CALLS BUT WE PRIDE 
+                OURSELVES ON ANSWERING OUR CUSTOMER CALLS PERSONALLY SO YOU GET A HUMAN EVERY TIME! WE EVEN OFFER A FREE TEXT MESSAGING
+                SERVICE, 24 HOURS A DAY/7 DAYS A WEEK, WHEN SPEAKING ON THE PHONE IS NOT AN OPTION. HERE AT GT AUTO TRANSPORT, LLC WE 
+                COMPLETELY UNDERSTAND THAT PRICE IS ALWAYS A MAJOR FACTOR SO WE STRIVE TO PROVIDE TOP NOTCH SERVICE FOR THE BEST PRICE 
+                AVAILABLE. WE OFFER MANY VARIOUS DISCOUNTS INCLUDING SENIOR CITIZEN, MILITARY, MULTI-CAR/VEHICLE, STUDENT AND RETURN 
+                CUSTOMER. FEEL FREE TO USE THE (<strong><%= link_to "QUICK QUOTE", new_quote_path %></strong>) LINK TO CONTACT US FOR A FREE AND FAST QUOTE. </p>
           </div>
           <!-- /Section Title -->
           <br />
@@ -192,6 +191,21 @@
                   <small class="author-bottom"><%= link_to "Johnny M", "http://www.transportreviews.com/Company/GT-Auto-Transport-LLC/Reviews/274578/", :target => "_blank" %></small>
                 </blockquote>
               </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-3">
+              <%= image_tag ("gtauto/bbb_logo.png"), class: "img-responsive centerLogo" %>
+            </div>
+            <div class="col-md-3">
+              <%= image_tag ("gtauto/transport_logo.png"), class: "img-responsive centerLogo" %>
+            </div>
+            <div class="col-md-3">
+              <%= image_tag ("gtauto/fmcsa.png"), class: "img-responsive centerLogo" %>
+            </div>
+            <div class="col-md-3">
+              <%= image_tag ("gtauto/dot_logo.jpg"), class: "img-responsive" %>
             </div>
           </div>
         

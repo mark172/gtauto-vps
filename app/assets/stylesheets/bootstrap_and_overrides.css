@@ -140,6 +140,12 @@
   margin-top: -50px;
 }
 
+.centerLogo {
+  /*position: absolute;*/
+  top: 50%;
+  transform: translateY(50%);
+}
+
 
 /*@media (max-width: 767px) {*/
 /*  .hnav.nav-main .navbar-toggle {*/

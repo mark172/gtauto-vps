@@ -146,6 +146,17 @@
   transform: translateY(50%);
 }
 
+.transportText {
+    display: block;
+    font: 400 1.1em/1em "Roboto Condensed";
+    margin: 0;
+    padding: 0.4em 0 0.7em 0;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #0033ff;
+    font-weight: bold;
+}
+
 
 /*@media (max-width: 767px) {*/
 /*  .hnav.nav-main .navbar-toggle {*/

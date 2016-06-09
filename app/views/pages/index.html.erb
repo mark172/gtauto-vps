@@ -50,9 +50,9 @@
                   <div class="slide">
                     <!-- Text -->
                     <div class="text">
-                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">order form</h1>
-                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get started with your vehicle transport, please click the button below and out the form. If at any time you have any questions or run into any trouble please call our Sales office, toll free, at <strong>1-208-350-8590</strong>.</p>
-                      <%= link_to "start an order", new_order_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
+                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">track shipment</h1>
+                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get the status of your order we ask that you either click the button and fill out a tracking form, e-mail status@gtautotransport.com directly or call <strong>208-350-8590</strong>.</p>
+                      <%= link_to "track shipment", new_order_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
                     </div>
                     <!-- /Text -->
                     <%= image_tag ("gtauto/harley.png"), class: "img-main" %>
@@ -63,9 +63,9 @@
                   <div class="slide">
                     <!-- Text -->
                     <div class="text">
-                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">order status</h1>
-                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">To get the status of your order we ask that you either click the button and fill out a tracking form, e-mail status@gtautotransport.com directly or call <strong>1-208-350-8590</strong>.</p>
-                      <%= link_to "track shipment", new_tracking_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
+                      <h1 class="bx-layer case-u" data-anim="slideInDown" data-dur="1000" data-delay="200" contenteditable="true">contact us</h1>
+                      <p class="bx-layer" data-anim="slideInDown" data-dur="1000" data-delay="0" contenteditable="true">Click the button to be taken to our contact page.</p>
+                      <%= link_to "contact us", contacts_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
                     </div>
                     <!-- /Text -->
                     <%= image_tag ("gtauto/boat.png"), class: "img-main" %>
@@ -89,8 +89,8 @@
                   <div id="intro-pager" class="tab-pager">
                     <a data-slide-index="0" href="#"><i class="icon fa fa-arrow-right"></i><span>Free Quote</span></a>
                     <a data-slide-index="1" href="#"><i class="icon fa fa-arrow-right"></i><span>place an order</span></a>
-                    <a data-slide-index="2" href="#"><i class="icon fa fa-arrow-right"></i><span>order form</span></a>
-                    <a data-slide-index="3" href="#"><i class="icon fa fa-arrow-right"></i><span>tracking</span></a>
+                    <a data-slide-index="2" href="#"><i class="icon fa fa-arrow-right"></i><span>track shipment</span></a>
+                    <a data-slide-index="3" href="#"><i class="icon fa fa-arrow-right"></i><span>contact us</span></a>
                   </div>
                   <!-- /Pager -->
                 </div>
@@ -130,12 +130,61 @@
           </div>
           <!-- /Section Title -->
           <br />
-          <hr>
           <br />
+          
+          <!-- Content Block
+      ============================================ -->
+      <section class="content-block light-bg">
+      
+
+          <!-- Row -->
+          <div class="row">
+          
+            <!-- Col -->
+            <div class="col-sm-6 col-md-4">
+              <!-- hfeat -->
+              <div class="service hfeat hfeat-md">
+                <i class="icon ti-check-box" ></i>
+                <a class="title">BEEN IN BUSINESS FOR OVER 10 YEARS</a>
+              </div>
+              <!-- /hfeat -->
+            </div>
+            <!-- /Col -->
+            
+            <!-- Col -->
+            <div class="col-sm-6 col-md-4">
+              <!-- hfeat -->
+              <div class="service hfeat hfeat-md">
+                <i class="icon ti-check-box"></i>
+                <a class="title">MILITARY, STUDENT, RETURN CUSTOMER, MULTI-CAR & SENIOR CITIZEN DISCOUNT OFFERED</a>
+              </div>
+              <!-- /hfeat -->
+            </div>
+            <!-- /Col -->
+            
+            <!-- Col -->
+            <div class="col-sm-6 col-md-4">
+              <!-- hfeat -->
+              <div class="service hfeat hfeat-md">
+                <i class="icon ti-check-box"></i>
+                <a class="title">WE OFFER $25 REFER-A-PAL BONUSES</a>
+              </div>
+              <!-- /hfeat -->
+            </div>
+            <!-- /Col -->
+          
+          </div>
+          <!-- /Row -->
+
+      </section>
+      <!-- /Content Block
+      ============================================-->
+      <br>
+      <br>
         
           <!-- Section Title -->
           <div class="section-title">
-            <h2>customer testmonials</h2>
+            <h2>what our customers are saying</h2>
           </div>
           <!-- Section Title -->
           
@@ -195,16 +244,17 @@
           </div>
           <hr>
           <div class="row">
-            <div class="col-md-3">
-              <%= image_tag ("gtauto/bbb_logo.png"), class: "img-responsive centerLogo" %>
+            <div class="col-md-2 col-md-offset-2 col-sm-6">
+              <%= image_tag ("gtauto/bbb_logo.png"), class: "img-responsive " %>
             </div>
-            <div class="col-md-3">
-              <%= image_tag ("gtauto/transport_logo.png"), class: "img-responsive centerLogo" %>
+            <div class="col-md-2 col-sm-6">
+              <%= image_tag ("gtauto/transport_logo.png"), class: "img-responsive " %>
+              <p class="transportText">5 Stars Since 2006</p>
             </div>
-            <div class="col-md-3">
-              <%= image_tag ("gtauto/fmcsa.png"), class: "img-responsive centerLogo" %>
+            <div class="col-md-2 col-sm-6">
+              <%= image_tag ("gtauto/fmcsa.png"), class: "img-responsive " %>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2 col-sm-6">
               <%= image_tag ("gtauto/dot_logo.jpg"), class: "img-responsive" %>
             </div>
           </div>

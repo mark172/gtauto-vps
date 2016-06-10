@@ -1618,11 +1618,11 @@ input[type="checkbox"] {
   .hnav .navbar-collapse {
     padding: 0;
     margin: 0; }
-    @media (max-width: 767px) {
+    @media (max-width: 1199px) {
       .hnav .navbar-collapse {
         overflow: auto;
         max-height: 300px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .hnav .navbar-dont-collapse .navbar-nav {
       margin: 0;
       border: none; }
@@ -1683,13 +1683,13 @@ input[type="checkbox"] {
   margin-right: 0; }
 .hnav .navbar-left {
   margin-right: 15px; }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .hnav .navbar-left, .hnav .navbar-right {
     margin: 0; } }
 
 /* navbar btn
 ........................... */
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .nav-buttons .navbar-btn {
     margin-top: 0; } }
 
@@ -1703,7 +1703,7 @@ input[type="checkbox"] {
   z-index: 20; }
   .hnav .btn-wrapper > .btn, .hnav .btn-wrapper > .navbar-btn {
     display: block; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .hnav .btn-wrapper {
       position: static; } }
 .hnav .navbar-btn-group {
@@ -1718,7 +1718,7 @@ input[type="checkbox"] {
     position: relative; }
     .hnav .navbar-btn-group .btn-wrapper > .btn {
       display: block; }
-    @media (max-width: 767px) {
+    @media (max-width: 1199px) {
       .hnav .navbar-btn-group .btn-wrapper {
         position: static; } }
 .hnav .btn .count {
@@ -1733,7 +1733,7 @@ input[type="checkbox"] {
   top: -10px;
   position: absolute;
   font-size: 11px; }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .hnav .nav-buttons {
     position: absolute;
     top: 32px;
@@ -1763,7 +1763,7 @@ input[type="checkbox"] {
     height: 34px;
     padding-top: 0;
     padding-bottom: 0; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .hnav .nav-form-panel.dropdown-menu {
       min-width: 0;
       left: auto;
@@ -1892,7 +1892,7 @@ input[type="checkbox"] {
         border: none; }
       .hnav .navbar-nav > li .dropdown-menu.mega-menu .links > li.active > a, .hnav .navbar-nav > li .dropdown-menu.mega-menu .links > li:hover > a {
         color: #185cd5; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .hnav .navbar-nav {
       border: none;
       padding: 0;
@@ -1956,7 +1956,7 @@ input[type="checkbox"] {
   left: 0;
   right: 0;
   margin: 0 auto; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .hnav .navbar-nav.line-top > li:hover > a:after, .hnav .navbar-nav.line-top > li.active > a:after, .hnav .navbar-nav.line-bottom > li:hover > a:after, .hnav .navbar-nav.line-bottom > li.active > a:after {
       height: 70% !important;
       width: 3px;
@@ -2004,7 +2004,7 @@ input[type="checkbox"] {
     .hnav.hnav-sm .navbar-brand img {
       height: 30px;
       margin: 7px 0; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .hnav.hnav-sm .nav-buttons {
       position: absolute;
       top: 7px;

@@ -12,7 +12,7 @@
           <div class="row">
           
             <!-- Col -->
-            <div class="col-xs-12 col-sm-10 col-md-9">
+            <div class="col-xs-12 col-sm-9 col-md-9">
             
               <!-- Intro Slider Wrapper -->
               <div class="intro-slider">
@@ -29,7 +29,7 @@
                       <%= link_to "get a free quote", new_quote_path, class: "btn btn-primary no-border btn-bigger bx-layer", :data => { :anim => 'slideInUp', :dur => '1000', :delay => '600' }  %>
                     </div>
                     <!-- /Text -->
-                    <%= image_tag ("gtauto/bugatti_main.png"), class: "img-main" %>
+                    <%= link_to (image_tag ("gtauto/quick_quite.png"), class: "img-main-quote"), new_quote_path %>
                   </div>
                   <!-- /Slide -->
                   
@@ -117,16 +117,19 @@
           
           <!-- Section Title -->
           <div class="section-title">
-            <h2>Door-to-Door Service | Open and Enclosed Transport | Competitive Rates</h2>
-            <p>WHETHER IT'S ACROSS THE STATE OR COAST TO COAST; GT AUTO TRANSPORT, LLC WILL DELIVER A HIGHER CALIBER OF 
-                CUSTOMER SERVICE THAT EXCEEDS OUR COMPETITOR'S STANDARDS. WE ARE A CHRISTIAN FAITH BASED AND FAMILY OWNED BUSINESS. WE 
-                OPERATE IN EVERY STATE (INCLUDING ALASKA & HAWAII) EXCEPT WASHINGTON, D.C. WE HAVE BEEN IN BUSINESS FOR OVER 10 YEARS, SO WE 
-                ARE FIRMLY PLANTED IN THIS INDUSTRY! MANY TRANSPORT COMPANIES HAVE AUTOMATED PHONE LINES TO FIELD THEIR CALLS BUT WE PRIDE 
-                OURSELVES ON ANSWERING OUR CUSTOMER CALLS PERSONALLY SO YOU GET A HUMAN EVERY TIME! WE EVEN OFFER A FREE TEXT MESSAGING
-                SERVICE, 24 HOURS A DAY/7 DAYS A WEEK, WHEN SPEAKING ON THE PHONE IS NOT AN OPTION. HERE AT GT AUTO TRANSPORT, LLC WE 
-                COMPLETELY UNDERSTAND THAT PRICE IS ALWAYS A MAJOR FACTOR SO WE STRIVE TO PROVIDE TOP NOTCH SERVICE FOR THE BEST PRICE 
-                AVAILABLE. WE OFFER MANY VARIOUS DISCOUNTS INCLUDING SENIOR CITIZEN, MILITARY, MULTI-CAR/VEHICLE, STUDENT AND RETURN 
-                CUSTOMER. FEEL FREE TO USE THE (<strong><%= link_to "QUICK QUOTE", new_quote_path %></strong>) LINK TO CONTACT US FOR A FREE AND FAST QUOTE. </p>
+            <div class="jumbotron">
+              <h2>Door-to-Door Service | Open and Enclosed Transport | Competitive Rates</h2>
+            </div>
+            
+            <p><strong>GT Auto Transport, LLC</strong> offers the highest standard of carriers that are honest, reliable, licensed and insured! Whether you're a dealer or individual, we work to provide you with the most satisfying auto transportation services. Whether it's across the state or coast to coast; GT Auto Transport, LLC will deliver a higher caliber of 
+                customer service that exceeds our competitor's standards. We are a christian faith based and family owned business. We 
+                operate in every state (including Alaska & Hawaii) except Washington, D.C. We have been in business for over 10 years, so we 
+                are firmly planted in this industry! Many transport companies have automated phone lines to field their calls but we pride 
+                ourselves on answering our customer calls personally so you get a human every time! We even offer a free text messaging
+                service, 24 hours a day/7 days a week, when speaking on the phone is not an option. Here at GT Auto Transport, LLC we 
+                completely understand that price is always a major factor so we strive to provide top notch service for the best price 
+                available. We offer many various discounts including senior citizen, military, multi-car/vehichle, student and return 
+                customer. Feel free to use the (<strong><%= link_to "QUICK QUOTE", new_quote_path %></strong>) link to contact us for a free and fast quote. </p>
           </div>
           <!-- /Section Title -->
           <br />
@@ -141,7 +144,7 @@
           <div class="row">
           
             <!-- Col -->
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm-10 col-md-4">
               <!-- hfeat -->
               <div class="service hfeat hfeat-md">
                 <i class="icon ti-check-box" ></i>
@@ -152,7 +155,7 @@
             <!-- /Col -->
             
             <!-- Col -->
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm-10 col-md-4">
               <!-- hfeat -->
               <div class="service hfeat hfeat-md">
                 <i class="icon ti-check-box"></i>
@@ -163,7 +166,7 @@
             <!-- /Col -->
             
             <!-- Col -->
-            <div class="col-sm-6 col-md-4">
+            <div class="col-sm-10 col-md-4">
               <!-- hfeat -->
               <div class="service hfeat hfeat-md">
                 <i class="icon ti-check-box"></i>

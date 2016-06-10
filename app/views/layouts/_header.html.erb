@@ -61,10 +61,8 @@
           <span class="sr-only">Toggle navigation</span>
           <i class="ti ti-menu"></i>
         </button>
-        <a class="navbar-brand" href="index.html">
-          <%= image_tag ("gtauto/gtat_blue.png"), class: "hidden-xs" %> <!-- Default Logo -->
-          <%= image_tag ("gtauto/gtat_blue.png"), class: "visible-xs" %> <!-- Mobile Logo -->
-        </a>
+        <%= link_to (image_tag ("gtauto/gtat_blue.png"), class: "hidden-xs"), root_path, class: "navbar-brand" %> <!-- Default Logo -->
+        <%= link_to (image_tag ("gtauto/gtat_blue.png"), class: "visible-xs"), root_path, class: "navbar-brand" %>
       </div>
       <% if mobile? %>
         <div class="visible-xs translation" id="google_translate_element"></div>

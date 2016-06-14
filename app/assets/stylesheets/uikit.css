@@ -172,7 +172,7 @@
 /*.cover-4-bg {*/
 /*  background: image-url("assets/backgrounds/cover4.jpg") no-repeat center 0 fixed; }*/
 
-.page-bg { background: url('/assets/backgrounds/mapBGBlue.jpg') no-repeat center 0 fixed; }
+.page-bg { background: url('/assets/backgrounds/mapBG.jpg') no-repeat center 0 fixed; }
 
 /* UTILITY CLASSES
 ------------------------------------------- */
@@ -2299,7 +2299,7 @@ body {
   position: relative;
   z-index: 200; }
   .content-block.default-bg {
-    background: #fff; }
+    background: #FFBD00; } /* my change */
   .content-block.dark-bg {
     background: rgba(42, 55, 68, 0.9);
     color: rgba(255, 255, 255, 0.5); }
@@ -2310,7 +2310,8 @@ body {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .content-block .container.cont-main {
-    padding: 80px 15px; }
+    padding: 80px 15px;
+    background-color: #fff;} /* my change */
     .content-block .container.cont-main.pad-t-50pc {
       padding-top: 40px; }
   @media (max-width: 767px) {

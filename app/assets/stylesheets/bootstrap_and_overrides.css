@@ -204,6 +204,9 @@
 	}
 }
 
+.bulletPoints {
+  background-color: rgba(76, 112, 255, 0.2);
+}
 /*@media (max-width: 767px) {*/
 /*  .hnav.nav-main .navbar-toggle {*/
 /*    margin-top: 30px;*/

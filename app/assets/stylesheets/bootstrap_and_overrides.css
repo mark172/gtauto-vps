@@ -205,8 +205,14 @@
 }
 
 .bulletPoints {
-  background-color: rgba(76, 112, 255, 0.2);
+  background-color: rgba(76, 112, 255, 1.0);
 }
+
+.jumbotron h1, .jumbotron .h1 {
+    color: #0033ff;
+    text-transform: uppercase;
+}
+
 /*@media (max-width: 767px) {*/
 /*  .hnav.nav-main .navbar-toggle {*/
 /*    margin-top: 30px;*/

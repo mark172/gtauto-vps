@@ -2782,13 +2782,13 @@ section-title.invert-colors, .dark-bg .section-title {
     -o-box-sizing: content-box;
     -ms-box-sizing: content-box;
     box-sizing: content-box;
-    color: #185cd5; }
+    color: #f6f6f6; } /* my change */
   .hfeat .title {
     font-size: 16px;
     text-transform: capitalize;
     line-height: 1;
     margin: 0 0 12px 0;
-    color: #063796; }
+    color: #f6f6f6; } /* my change */
   .hfeat .text {
     font-size: 14px;
     margin: 0;

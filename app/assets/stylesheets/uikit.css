@@ -172,7 +172,11 @@
 /*.cover-4-bg {*/
 /*  background: image-url("assets/backgrounds/cover4.jpg") no-repeat center 0 fixed; }*/
 
-.page-bg { background: url('/assets/backgrounds/mapBG.jpg') no-repeat center 0 fixed; }
+.page-bg { background: url('/assets/backgrounds/carBG2.jpg') no-repeat center 0 fixed; }
+
+@media (max-width: 767px) {
+  .page-bg { background: url('/assets/backgrounds/carBG2.jpg'); }
+}
 
 /* UTILITY CLASSES
 ------------------------------------------- */
@@ -2212,7 +2216,7 @@ body {
   .intro-block.dark-bg {
     background: rgba(42, 55, 68, 0.9); }
   .intro-block.light-bg {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8); /* my change */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .intro-block.border-bottom {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
@@ -2299,7 +2303,7 @@ body {
   position: relative;
   z-index: 200; }
   .content-block.default-bg {
-    background: #FFBD00; } /* my change */
+    background: #FF3B00; } /* my change */
   .content-block.dark-bg {
     background: rgba(42, 55, 68, 0.9);
     color: rgba(255, 255, 255, 0.5); }

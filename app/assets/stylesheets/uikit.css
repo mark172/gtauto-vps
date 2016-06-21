@@ -19,7 +19,7 @@
   color: #0033ff; } /* my change */
 
 .bcolor-bg {
-  background-color: #0033ff; } /* my change */
+  background-color: #000; } /* my change */
   .bcolor-bg.bgcolor-fixed {
     background-color: #0033ff !important; } /* my change */
 
@@ -1992,7 +1992,7 @@ input[type="checkbox"] {
   .hnav.invert-colors .navbar-nav.borders-lr > li > a, .hnav.invert-colors .navbar-nav.borders-l > li > a, .hnav.invert-colors .navbar-nav.borders-r > li > a {
     border-color: rgba(255, 255, 255, 0.2) !important; }
   .hnav.invert-colors .navbar-nav > li > a {
-    color: #fcda31; }
+    color: #fff; } /* my change */
   .hnav.invert-colors .navbar-nav > li:hover > a, .hnav.invert-colors .navbar-nav > li.active > a {
     color: #fff; }
 
@@ -2303,7 +2303,7 @@ body {
   position: relative;
   z-index: 200; }
   .content-block.default-bg {
-    background: #ff0000; } /* my change */
+    background: #fff; } /* my change */
   .content-block.dark-bg {
     background: rgba(42, 55, 68, 0.9);
     color: rgba(255, 255, 255, 0.5); }

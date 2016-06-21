@@ -2315,7 +2315,7 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .content-block .container.cont-main {
     padding: 80px 15px;
-    background-color: #fff;} /* my change */
+    background-color: #f6f6f6;} /* my change */
     .content-block .container.cont-main.pad-t-50pc {
       padding-top: 40px; }
   @media (max-width: 767px) {

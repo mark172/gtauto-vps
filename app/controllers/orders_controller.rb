@@ -39,12 +39,14 @@ class OrdersController < ApplicationController
         email = params[:order][:email]
         origin_first_name = params[:order][:origin_first_name]
         origin_last_name = params[:order][:origin_last_name]
+        origin_street = params[:order][:origin_street]
         origin_city = params[:order][:origin_city]
         origin_state = params[:order][:origin_state]
         origin_zip = params[:order][:origin_zip]
         origin_cell_phone = params[:order][:origin_cell_phone]
         destination_first_name = params[:order][:destination_first_name]
         destination_last_name = params[:order][:destination_last_name]
+        destination_street = params[:order][:destination_street]
         destination_city = params[:order][:destination_city]
         destination_state = params[:order][:destination_state]
         destination_zip = params[:order][:destination_zip]
@@ -55,7 +57,7 @@ class OrdersController < ApplicationController
         is_operable = params[:order][:is_operable]
         description = params[:order][:description]
         
-        OrderMailer.order_email(todays_date, date_first_available, phone, email, origin_first_name, origin_last_name, origin_city, origin_state, origin_zip, origin_cell_phone, destination_first_name, destination_last_name, destination_city, destination_state, destination_zip, destination_cell_phone, year, make, model, is_operable, description).deliver_now
+        OrderMailer.order_email(todays_date, date_first_available, phone, email, origin_first_name, origin_last_name, origin_street, origin_city, origin_state, origin_zip, origin_cell_phone, destination_first_name, destination_last_name, destination_street, destination_city, destination_state, destination_zip, destination_cell_phone, year, make, model, is_operable, description).deliver_now
         
         flash[:success] = "Your order request was successfully sent."
         format.html { redirect_to new_order_path }
@@ -100,6 +102,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:todays_date, :date_first_available, :quote_number, :amount_quoted, :phone, :email, :origin_first_name, :origin_last_name, :origin_city, :origin_state, :origin_zip, :origin_home_phone, :origin_work_phone, :origin_cell_phone, :destination_first_name, :destination_last_name, :destination_city, :destination_state, :destination_zip, :destination_home_phone, :destination_work_phone, :destination_cell_phone, :year, :make, :model, :license_plate, :vin, :color, :is_operable, :is_oversied, :payment, :description)
+      params.require(:order).permit(:todays_date, :date_first_available, :phone, :email, :origin_first_name, :origin_last_name, :origin_street, :origin_city, :origin_state, :origin_zip, :origin_cell_phone, :destination_first_name, :destination_last_name, :destination_street, :destination_city, :destination_state, :destination_zip, :destination_cell_phone, :year, :make, :model, :is_operable, :description)
     end
 end

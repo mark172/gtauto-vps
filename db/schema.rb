@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160625221247) do
+ActiveRecord::Schema.define(version: 20160625231600) do
 
   create_table "orders", force: :cascade do |t|
     t.date     "todays_date"
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20160625221247) do
     t.text     "description"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "origin_street"
+    t.string   "destination_street"
   end
 
   create_table "quotes", force: :cascade do |t|

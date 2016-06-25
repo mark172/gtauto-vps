@@ -8,8 +8,6 @@
     <h3>Contact Information</h3>
     <p>Today's Date: <strong><%= "#{Date.parse(@todays_date).strftime("%B %e, %Y")}" %></strong></p>
     <p>Date first available: <strong><%= "#{Date.parse(@date_first_available).strftime("%B %e, %Y")}" %></strong></p>
-    <p>Quote Number: <strong><%= "#{@quote_number}" %></strong></p>
-    <p>Amount Quoted: <strong>$<%= "#{@amount_quoted}" %></strong></p>
     <p>Email: <strong><%= "#{@email}" %></strong></p>
     <p>Phone: <strong><%= "#{@phone}" %></strong></p>
     <br>
@@ -19,9 +17,7 @@
     <p>Origin City: <strong><%= "#{@origin_city}" %></strong></p>
     <p>Origin State: <strong><%= "#{@origin_state}" %></strong></p>
     <p>Origin Zip: <strong><%= "#{@origin_zip}" %></strong></p>
-    <p>Origin Home Phone: <strong><%= "#{@origin_home_phone}" %></strong></p>
-    <p>Origin Work Phone: <strong><%= "#{@origin_work_phone}" %></strong></p>
-    <p>Origin Cell Phone: <strong><%= "#{@origin_cell_phone}" %></strong></p>
+    <p>Origin Primary Phone: <strong><%= "#{@origin_cell_phone}" %></strong></p>
     <br>
     <h3>Destination Information</h3>
     <p>Destination First Name: <strong><%= "#{@destination_first_name}" %></strong></p>
@@ -29,28 +25,17 @@
     <p>Destination City: <strong><%= "#{@destination_city}" %></strong></p>
     <p>Destination State: <strong><%= "#{@destination_state}" %></strong></p>
     <p>Destination Zip: <strong><%= "#{@destination_zip}" %></strong></p>
-    <p>Destination Home Phone: <strong><%= "#{@destination_home_phone}" %></strong></p>
-    <p>Destination Work Phone: <strong><%= "#{@destination_work_phone}" %></strong></p>
-    <p>Destination Cell Phone: <strong><%= "#{@destination_cell_phone}" %></strong></p>
+    <p>Destination Primary Phone: <strong><%= "#{@destination_cell_phone}" %></strong></p>
     <br>
     <h3>Vehichle Information</h3>
     <p>Year: <strong><%= "#{@year}" %></strong></p>
     <p>Make: <strong><%= "#{@make}" %></strong></p>
     <p>Model: <strong><%= "#{@model}" %></strong></p>
-    <p>License Plate: <strong><%= "#{@license_plate}" %></strong></p>
-    <p>VIN#: <strong><%= "#{@vin}" %></strong></p>
-    <p>Color: <strong><%= "#{@color}" %></strong></p>
     <% if @is_operable == "true" %>
       <p>Is car operable? <strong>Yes</strong></p>
     <% else %>
       <p>Is car operable? <strong>No</strong></p>
     <% end %>
-    <% if @is_oversied == "true" %>
-      <p>Oversized? <strong>Yes</strong></p>
-    <% else %>
-      <p>Oversized? <strong>No</strong></p>
-    <% end %>
-    <p>Payment Type: <strong><%= "#{@payment}" %></strong></p>
     <p>Extra information: <%= "#{@description}" %></p>
   </body>
 </html>

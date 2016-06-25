@@ -11,18 +11,6 @@
         <%= f.input :date_first_available, validate: { presence: false, uniqueness: false }, as: :date_picker, readonly: true, label: false, placeholder: "Date first available (Required)" %>
         <div class="form-group">
           <div class="input-group">
-            <div class="input-group-addon"><i class="fa fa-hashtag"></i></div>
-            <%= f.input :quote_number, label: false, placeholder: "Quote number (Required)", input_html: {class: "form-control"} %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-group">
-            <div class="input-group-addon"><i class="fa fa-usd"></i></div>
-            <%= f.input :amount_quoted, label: false, placeholder: "Amount quoted / numbers only (Required)", input_html: {class: "form-control"} %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-group">
             <div class="input-group-addon"><i class="fa fa-phone"></i></div>
             <%= f.input :phone, validate: { presence: false, uniqueness: false }, label: false, placeholder: "Phone number xxx-xxx-xxxx (Required)", input_html: {class: "form-control inputmask"} %>
           </div>
@@ -63,18 +51,6 @@
         <%= f.input :origin_zip, label: false, placeholder: "Zip code (Required)", input_html: {class: "form-control"} %>
         <div class="form-group">
           <div class="input-group">
-            <div class="input-group-addon"><i class="fa fa-home"></i></div>
-            <%= f.input :origin_home_phone, validate: { presence: false, uniqueness: false }, label: false, placeholder: "Home phone xxx-xxx-xxxx (Required)", input_html: {class: "form-control inputmask"} %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-group">
-            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-            <%= f.input :origin_work_phone, validate: { presence: false, uniqueness: false }, label: false, placeholder: "Work phone xxx-xxx-xxxx (Required)", input_html: {class: "form-control inputmask"} %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-group">
             <div class="input-group-addon"><i class="fa fa-mobile"></i></div>
             <%= f.input :origin_cell_phone, validate: { presence: false, uniqueness: false }, label: false, placeholder: "Cell phone xxx-xxx-xxxx (Required)", input_html: {class: "form-control inputmask"} %>
           </div>
@@ -107,18 +83,6 @@
         <%= f.input :destination_zip, label: false, placeholder: "Zip code (Required)", input_html: {class: "form-control"} %>
         <div class="form-group">
           <div class="input-group">
-            <div class="input-group-addon"><i class="fa fa-home"></i></div>
-            <%= f.input :destination_home_phone, validate: { presence: false, uniqueness: false }, label: false, placeholder: "Home phone xxx-xxx-xxxx (Required)", input_html: {class: "form-control inputmask"} %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-group">
-            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-            <%= f.input :destination_work_phone, validate: { presence: false, uniqueness: false }, label: false, placeholder: "Work phone xxx-xxx-xxxx (Required)", input_html: {class: "form-control inputmask"} %>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="input-group">
             <div class="input-group-addon"><i class="fa fa-mobile"></i></div>
             <%= f.input :destination_cell_phone, validate: { presence: false, uniqueness: false }, label: false, placeholder: "Cell phone xxx-xxx-xxxx (Required)", input_html: {class: "form-control inputmask"} %>
           </div>
@@ -139,13 +103,7 @@
         <%= f.input :year, label: false, collection: Time.now.year.downto(1900), prompt: 'Select year (Required)', :input_html => { :class => "form-control"} %>
         <%= f.input :make, label: false, placeholder: "Make (Required)", input_html: {class: "form-control"} %>
         <%= f.input :model, label: false, placeholder: "Model (Required)", input_html: {class: "form-control"} %>
-        <%= f.input :license_plate, label: false, placeholder: "License plate number (Required)", input_html: {class: "form-control"} %>
-        <%= f.input :vin, label: false, placeholder: "VIN number (Required)", input_html: {class: "form-control"} %>
-        <%= f.input :color, validate: { presence: true, uniqueness: false }, label: false, placeholder: "Color (Required)", input_html: {class: "form-control"} %>
         <p class="orderCheckbox"><strong>Does this vehicle run?</strong></p><%= f.collection_radio_buttons :is_operable, [[true, 'Yes'] ,[false, 'No']], :first, :last, :checked => true, required: true, :label => "Does it run", input_html: {class: "form-control"} %>
-        <p class="orderCheckbox"><strong>Oversized?</strong></p><%= f.collection_radio_buttons :is_oversied, [[true, 'Yes'] ,[false, 'No']], :first, :last, :checked => true, required: true, :label => "Oversized?", input_html: {class: "form-control"} %>
-        <p class="orderPayment">A $200.00 deposit is required to submit your booking online. You will also give your authorization to submit payment for services to help with the arrangement of transportation for the above stated vehicle(s). Choose a payment method below but please call to make payment. We accept Visa, Mastercard, Discover, American Express, PayPal and checks.</p>
-        <%= f.input :payment, label: false, :collection => ::Payments.sort.map {|k,v| [v,k]}, prompt: 'Select payment type (Required)', input_html: {class: "form-control"} %>
         <%= f.input :description, validate: { presence: false, uniqueness: false }, label: false, placeholder: "Please use this field to describe any special instructions that might avoid a delay in delivery.", input_html: {class: "form-control", rows: "10"} %>
       </div>
     </div>

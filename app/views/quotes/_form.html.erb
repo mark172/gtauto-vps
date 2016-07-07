@@ -31,7 +31,7 @@
             <%= f.input :phone, validate: { presence: false, uniqueness: false }, label: false, placeholder: "Phone number XXX-XXX-XXXX (Required)", input_html: {class: "form-control inputmask"} %>
           </div>
         </div>
-        <%= f.input :pick_up_date, as: :date_picker, validate: { presence: false, uniqueness: false }, readonly: true, label: false, placeholder: "Select a pick-up date (Required)" %>
+        <%= f.input :pick_up_date, as: :date_picker, validate: { presence: false, uniqueness: false }, readonly: true, label: false, placeholder: "Select a pick-up date" %>
       </div>
     </div>
     <div class="panel panel-primary">
@@ -41,10 +41,10 @@
       <div class="panel-body">
         <%= f.input :origin_city, label: false, placeholder: "Origin city (Required)", input_html: {class: "form-control"} %>
         <%= f.input :origin_state, label: false, :collection => ::States.sort.map {|k,v| [v,k]}, prompt: 'Select state (Required)', input_html: {class: "form-control"} %>
-        <%= f.input :origin_zip, label: false, placeholder: "Origin zip code (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :origin_zip, label: false, validate: { presence: false}, placeholder: "Origin zip code", input_html: {class: "form-control"} %>
         <%= f.input :destination_city, label: false, placeholder: "Destination city (Required)", input_html: {class: "form-control"} %>
         <%= f.input :destination_state, label: false, :collection => ::States.sort.map {|k,v| [v,k]}, prompt: 'Select state (Required)', input_html: {class: "form-control"} %>
-        <%= f.input :destination_zip, label: false, placeholder: "Destination zip code (Required)", input_html: {class: "form-control"} %>
+        <%= f.input :destination_zip, label: false, validate: { presence: false}, placeholder: "Destination zip code", input_html: {class: "form-control"} %>
       </div>
     </div>
     <div class="panel panel-primary">

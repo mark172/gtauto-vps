@@ -36,7 +36,6 @@ class TrackingsController < ApplicationController
         last_name = params[:tracking][:last_name]
         phone = params[:tracking][:phone]
         email = params[:tracking][:email]
-        order_number = params[:tracking][:order_number]
         pick_up_date = params[:tracking][:pick_up_date]
         origin_city = params[:tracking][:origin_city]
         origin_state = params[:tracking][:origin_state]
@@ -48,7 +47,7 @@ class TrackingsController < ApplicationController
         make = params[:tracking][:make]
         model = params[:tracking][:model]
         
-        TrackingMailer.tracking_email(first_name, last_name, email, order_number, phone, pick_up_date, origin_city, origin_state, origin_zip, destination_city, destination_state, destination_zip, year, make, model).deliver_now
+        TrackingMailer.tracking_email(first_name, last_name, email, phone, pick_up_date, origin_city, origin_state, origin_zip, destination_city, destination_state, destination_zip, year, make, model).deliver_now
         
         flash[:success] = "Your tracking request was successfully sent."
         format.html { redirect_to new_tracking_path }
@@ -93,6 +92,6 @@ class TrackingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tracking_params
-      params.require(:tracking).permit(:first_name, :last_name, :phone, :email, :order_number, :pick_up_date, :origin_city, :origin_state, :origin_zip, :destination_city, :destination_state, :destination_zip, :year, :make, :model)
+      params.require(:tracking).permit(:first_name, :last_name, :phone, :email, :pick_up_date, :origin_city, :origin_state, :origin_zip, :destination_city, :destination_state, :destination_zip, :year, :make, :model)
     end
 end

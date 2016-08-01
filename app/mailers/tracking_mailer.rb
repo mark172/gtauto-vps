@@ -1,5 +1,5 @@
 class TrackingMailer < ActionMailer::Base
-    default to: 'mark172@me.com'
+    default to: 'sales@gtautotransport.com'
     def tracking_email(first_name, last_name, email, phone, pick_up_date, origin_city, origin_state, origin_zip, destination_city, destination_state, destination_zip, year, make, model)
         @first_name = first_name
         @last_name = last_name

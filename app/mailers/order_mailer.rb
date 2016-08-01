@@ -1,5 +1,5 @@
 class OrderMailer < ActionMailer::Base
-    default to: 'mark172@me.com'
+    default to: 'sales@gtautotransport.com'
     def order_email(todays_date, date_first_available, phone, email, origin_first_name, origin_last_name, origin_street, origin_city, origin_state, origin_zip, origin_cell_phone, destination_first_name, destination_last_name, destination_street, destination_city, destination_state, destination_zip, destination_cell_phone, year, make, model, is_operable, description)
         @todays_date = todays_date
         @date_first_available = date_first_available

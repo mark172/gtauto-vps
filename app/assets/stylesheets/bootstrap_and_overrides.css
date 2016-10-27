@@ -131,6 +131,9 @@
 #linkedIn a:hover {
   color: #0077B5;
 }
+#facebook a:hover {
+  color: #3b5598;
+}
 
 .orderPayment {
   margin-bottom: 15px;

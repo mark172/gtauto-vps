@@ -33,6 +33,7 @@ gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: '
 
 gem "font-awesome-rails"
 # gem 'themify-icons-rails'
+gem 'themify-icons-rails' , github: 'scratch-soft/themify-icons-rails'
 
 gem "recaptcha", require: "recaptcha/rails"
 

@@ -27,5 +27,18 @@ test:
  timeout: 5000
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+ adapter: postgresql
+ pool: 5
+ timeout: 5000
+ database: gtauto_production
+ username: deploy
+ password: <%= ENV["DATABASE_PASSWORD"] %>
+
+
+staging:
+ adapter: postgresql
+ pool: 5
+ timeout: 5000
+ database: gtauto_staging
+ username: deploy
+ password: <%= ENV["DATABASE_PASSWORD"] %>

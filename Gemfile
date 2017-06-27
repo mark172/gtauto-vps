@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.2'
 # Use SCSS for stylesheets
@@ -58,6 +58,10 @@ group :development, :test do
   gem 'byebug'
   # Use sqlite3 as the database for Active Record
   # gem 'sqlite3'
+  gem 'capistrano', '~> 3.8'
+	gem 'capistrano-rails', '~> 1.2'
+	gem 'capistrano-passenger'
+	gem 'capistrano-rvm'
 end
 
 group :development do
